@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annamalai Kathiresan | Java Full Stack Architect</title>
+  <meta name="description"
+    content="Portfolio of Annamalai Kathiresan, a Senior Java Full Stack Architect specializing in Spring Boot, Angular, and Enterprise Systems." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <div class="logo">AK<span>.</span></div>
+      <nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+              <!-- Icon injected by JS -->
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <canvas id="hero-canvas" class="hero-bg"></canvas>
+      <div class="container hero-content reveal">
+        <div class="profile-img-container">
+          <img src="./photo.jpeg" alt="Annamalai Kathiresan" class="profile-img">
+        </div>
+        <h1>Hi, I'm <span>Annamalai Kathiresan</span></h1>
+        <p>Senior Java Full Stack Architect building robust, high-performance enterprise systems with Spring Boot &
+          Angular.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="./Annamalai_Resume.pdf" download class="btn btn-outline">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-features">
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3>Full Stack Architecture</h3>
+            <p>Expert in end-to-end Architecture and Scaling, mastering both Monolithic and Microservices. Implementing
+              advanced
+              performance strategies across the stack from SQL tuning to Micro-frontends.</p>
+          </div>
+          <div class="feature-card reveal stagger-delay-1">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+                </path>
+              </svg>
+            </div>
+            <h3>User-Centric</h3>
+            <p>Dedicated to creating inclusive, and pixel-perfect interfaces. Expert in
+              Responsive Design, Design Systems integration, and optimizing Core Web Vitals for superior user
+              experience.</p>
+          </div>
+          <div class="feature-card reveal stagger-delay-2">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Leadership</h3>
+            <p>Technical leader driving Agile development and engineering best practices. Experienced in mentoring
+              teams, conducting code reviews, and bridging the gap between stakeholders and engineering.</p>
+          </div>
+        </div>
+
+        <div class="about-stats reveal">
+          <div class="stat-item">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-label">Years Exp.</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="10">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="100">0</span>
+            <span class="stat-label">Commitment</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="skills-container reveal">
+          <div class="skill-tag"><img
+              src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" width="15" alt="">
+            Java 21</div>
+          <div class="skill-tag"><img src="https://spring.io/img/projects/spring-boot.svg" width="20" alt=""> Spring
+            Boot</div>
+          <div class="skill-tag"><img src="https://angular.io/assets/images/logos/angular/angular.svg" width="20"
+              alt=""> Angular 19</div>
+          <div class="skill-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+              width="20" alt=""> React</div>
+          <div class="skill-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+              width="20" alt=""> TypeScript</div>
+          <div class="skill-tag"><img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="20"
+              alt=""> JavaScript (ES6+)</div>
+          <div class="skill-tag">HTML5 & CSS3</div>
+          <div class="skill-tag">Tailwind CSS</div>
+          <div class="skill-tag">SCSS</div>
+          <div class="skill-tag">Material UI</div>
+          <div class="skill-tag">Bootstrap</div>
+          <div class="skill-tag">RxJS</div>
+          <div class="skill-tag">NgRx</div>
+          <div class="skill-tag">Redux</div>
+          <div class="skill-tag">MySQL & MongoDB</div>
+          <div class="skill-tag">RESTful APIs</div>
+          <div class="skill-tag">Microservices</div>
+          <div class="skill-tag">Docker</div>
+          <div class="skill-tag">System Design</div>
+          <div class="skill-tag">Micro-frontends</div>
+          <div class="skill-tag">Git & GitHub</div>
+          <div class="skill-tag">CI/CD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <div class="project-card reveal">
+            <div class="project-icon">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Tata_Comm_logo.svg"
+                alt="Tata Communications">
+            </div>
+            <h3>Tata Communications</h3>
+            <p>Lead Frontend Architect for enterprise-grade Angular applications. Implemented scalable micro-frontends
+              architecture and optimized performance, managed CI/CD pipelines via GitHub Actions.</p>
+            <div class="project-tags">
+              <span class="project-tag">Angular</span>
+              <span class="project-tag">Micro-frontends</span>
+              <span class="project-tag">CI/CD</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card reveal stagger-delay-1">
+            <div class="project-icon">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Comcast_%282013-2024%29_logo.svg"
+                alt="Comcast">
+            </div>
+            <h3>Comcast Corporation</h3>
+            <p>Engineered critical features like "Bulk Invite" and "Bulk Modem Restart", improving onboarding efficiency
+              by 75%. Utilized advanced RxJS patterns and NgRx for state management.</p>
+            <div class="project-tags">
+              <span class="project-tag">Angular</span>
+              <span class="project-tag">RxJS</span>
+              <span class="project-tag">NgRx</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card reveal stagger-delay-2">
+            <div class="project-icon">
+              <img src="./toefl-logo.svg" alt="ETS TOEFL">
+            </div>
+            <h3>ETS — TOEFL Learn</h3>
+            <p>Developed a cross-platform mobile application using React Native. Integrated AWS Amplify & Cognito for
+              secure authentication. Achieved 90% code reuse across iOS and Android platforms.</p>
+            <div class="project-tags">
+              <span class="project-tag">React Native</span>
+              <span class="project-tag">AWS Amplify</span>
+              <span class="project-tag">Mobile</span>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card reveal stagger-delay-3">
+            <div class="project-icon">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Verizon_2024.svg" alt="Verizon">
+            </div>
+            <h3>Verizon Communications</h3>
+            <p>Built responsive dashboards using Angular and PrimeNG. Integrated Adobe Analytics for user tracking.
+              Optimized rendering to reduce load times by 30%.</p>
+            <div class="project-tags">
+              <span class="project-tag">Angular</span>
+              <span class="project-tag">PrimeNG</span>
+              <span class="project-tag">Analytics</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+
+          <!-- Job 1 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-role">Senior Consultant</span>
+                <span class="timeline-company">Capgemini Technology Services</span>
+                <span class="timeline-date">Dec 2024 – Present</span>
+              </div>
+              <p>Lead Frontend Architect for enterprise products. Delivering licensed Angular products and leading
+                architecture decisions, accessibility compliance, and CI/CD implementation.</p>
+            </div>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="timeline-item reveal stagger-delay-1">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-role">Senior Application Developer</span>
+                <span class="timeline-company">Accenture</span>
+                <span class="timeline-date">Sep 2020 – Dec 2024</span>
+              </div>
+              <p>Front-end development across multiple client projects including Verizon, ETS, and Comcast. Specialized
+                in Angular and React ecosystems, delivering high-impact features and performance optimizations.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container contact-container reveal">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+
+        <div class="social-links">
+          <a href="mailto:annamalaikathiresan@gmail.com" class="social-btn" aria-label="Email">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+          <a href="https://github.com/annamalai" target="_blank" class="social-btn" aria-label="GitHub">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/annamalai-kathireshan-3b7020b0" target="_blank" class="social-btn"
+            aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Annamalai Kathiresan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
