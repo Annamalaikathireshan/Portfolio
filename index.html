@@ -8,32 +8,68 @@
   <link rel="stylesheet" href="landing.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
   <div class="container">
+    <p class="eyebrow">Portfolio Hub</p>
     <h1>Annamalai Kathiresan</h1>
-    <p class="subtitle">Choose a specialized portfolio to explore my expertise</p>
+    <p class="subtitle">Choose a specialized portfolio to explore my expertise across architecture, full stack, and AI engineering.</p>
 
     <div class="portfolio-grid">
-      <!-- Frontend Portfolio -->
-      <a href="frontend.html" class="card frontend">
+      <a href="frontend.html" class="card frontend card-stagger-1">
+        <div class="card-glow"></div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 21V9"/>
+          </svg>
+        </div>
         <h2>Frontend Architect</h2>
-        <p>Specialized in building high-performance, pixel-perfect enterprise UIs with Angular, React, and modern CSS.
-        </p>
+        <p>Specialized in building high-performance, pixel-perfect enterprise UIs with Angular, React, and modern CSS.</p>
         <div class="badge">UI/UX & FE ARCHITECTURE</div>
+        <span class="card-cta">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
 
-      <!-- Full Stack Portfolio -->
-      <a href="fullstack.html" class="card fullstack">
+      <a href="fullstack.html" class="card fullstack card-stagger-2">
+        <div class="card-glow"></div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
         <h2>Java Full Stack</h2>
-        <p>End-to-end expertise spanning Java Spring Boot backends, secure REST APIs, and modern frontend frameworks.
-        </p>
+        <p>End-to-end expertise spanning Java Spring Boot backends, secure REST APIs, and modern frontend frameworks.</p>
         <div class="badge">JAVA + SPRING BOOT + ANGULAR</div>
+        <span class="card-cta">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a href="ai.html" class="card ai-engineer card-stagger-3 featured">
+        <div class="card-glow"></div>
+        <div class="featured-tag">New</div>
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            <circle cx="12" cy="5" r="1" fill="currentColor"/>
+            <circle cx="19" cy="12" r="1" fill="currentColor"/>
+            <circle cx="12" cy="19" r="1" fill="currentColor"/>
+            <circle cx="5" cy="12" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <h2>AI Engineer</h2>
+        <p>Designing intelligent systems with LLMs, RAG pipelines, and modern ML — from fundamentals to production-ready AI applications.</p>
+        <div class="badge">LLMs + RAG + AGENTS</div>
+        <span class="card-cta">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
     </div>
   </div>
+
+  <script src="landing.js"></script>
 </body>
 
 </html>

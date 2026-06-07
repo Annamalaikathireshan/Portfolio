@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initMagneticButtons();
   initMobileMenu();
   initCountUp();
+  initActiveNav();
+  initScrollProgress();
 });
 
 /* =========================================
@@ -158,10 +160,11 @@ function initHeroAnimation() {
   const ctx = canvas.getContext('2d');
   let width, height;
   let particles = [];
+  const isAiPortfolio = document.documentElement.getAttribute('data-portfolio') === 'ai';
 
   // Configuration
-  const particleCount = 60;
-  const connectionDistance = 150;
+  const particleCount = isAiPortfolio ? 70 : 60;
+  const connectionDistance = isAiPortfolio ? 160 : 150;
   const mouseDistance = 200;
 
   let mouse = { x: null, y: null };
@@ -230,8 +233,11 @@ function initHeroAnimation() {
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-secondary').trim();
-      ctx.globalAlpha = 0.3;
+      const particleColor = isAiPortfolio
+        ? getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim()
+        : getComputedStyle(document.documentElement).getPropertyValue('--text-secondary').trim();
+      ctx.fillStyle = particleColor;
+      ctx.globalAlpha = isAiPortfolio ? 0.5 : 0.3;
       ctx.fill();
     }
   }
@@ -256,7 +262,7 @@ function initHeroAnimation() {
     ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
 
     for (let i = 0; i < particles.length; i++) {
-      for (let j = i; j < particles.length; j++) {
+      for (let j = i + 1; j < particles.length; j++) {
         let dx = particles[i].x - particles[j].x;
         let dy = particles[i].y - particles[j].y;
         let distance = Math.sqrt(dx * dx + dy * dy);
@@ -265,8 +271,10 @@ function initHeroAnimation() {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.globalAlpha = 1 - (distance / connectionDistance);
-          ctx.lineWidth = 1;
+          ctx.globalAlpha = isAiPortfolio
+            ? (1 - (distance / connectionDistance)) * 0.7
+            : 1 - (distance / connectionDistance);
+          ctx.lineWidth = isAiPortfolio ? 1.2 : 1;
           ctx.stroke();
         }
       }
@@ -283,6 +291,44 @@ function initHeroAnimation() {
   resize();
   initParticles();
   animate();
+}
+
+/* =========================================
+   Active Nav (Scroll Spy)
+   ========================================= */
+function initActiveNav() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('#nav-links a[href^="#"]');
+
+  if (!sections.length || !navLinks.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+  sections.forEach(section => observer.observe(section));
+}
+
+/* =========================================
+   Scroll Progress Bar
+   ========================================= */
+function initScrollProgress() {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = `${progress}%`;
+  }, { passive: true });
 }
 
 /* =========================================

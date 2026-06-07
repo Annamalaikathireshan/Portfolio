@@ -116,7 +116,8 @@ section {
   transition: all 0.6s var(--ease-out-back);
 }
 
-.section-title.visible {
+.section-title.visible,
+.section-title.active {
   opacity: 1;
   transform: translateY(0);
 }
@@ -181,8 +182,13 @@ nav a::after {
   transition: width 0.3s var(--ease-smooth);
 }
 
-nav a:hover::after {
+nav a:hover::after,
+nav a.active::after {
   width: 100%;
+}
+
+nav a.active {
+  color: var(--accent-color);
 }
 
 /* Hamburger Menu */
@@ -746,6 +752,18 @@ footer {
     transition-delay: 0.6s;
   }
 
+  nav ul.active li:nth-child(7) {
+    transition-delay: 0.7s;
+  }
+
+  nav ul.active li:nth-child(8) {
+    transition-delay: 0.8s;
+  }
+
+  nav ul.active li:nth-child(9) {
+    transition-delay: 0.9s;
+  }
+
   .section-title {
     font-size: 2rem;
   }
@@ -853,4 +871,396 @@ footer {
 
 .stagger-delay-3 {
   transition-delay: 0.3s;
+}
+
+/* =========================================
+   AI Engineer Portfolio Theme
+   ========================================= */
+[data-portfolio="ai"] {
+  --accent-color: #06b6d4;
+  --accent-glow: rgba(6, 182, 212, 0.3);
+  --gradient-primary: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
+  --text-gradient: linear-gradient(270deg, #06b6d4, #8b5cf6, #06b6d4);
+}
+
+[data-portfolio="ai"][data-theme="dark"] {
+  --accent-color: #22d3ee;
+  --accent-glow: rgba(34, 211, 238, 0.25);
+  --text-gradient: linear-gradient(270deg, #22d3ee, #a78bfa, #22d3ee);
+}
+
+.hero-ai-gradient {
+  background: linear-gradient(270deg, #06b6d4, #8b5cf6, #06b6d4);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: hueShift 4s ease-in-out infinite;
+}
+
+@keyframes hueShift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: -2rem auto 3rem;
+  line-height: 1.6;
+}
+
+/* Learning Journey Section */
+.learning {
+  padding: 6rem 0;
+}
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.learning-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s var(--ease-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.learning-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.learning-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-glow);
+}
+
+.learning-card:hover::before {
+  opacity: 1;
+}
+
+.learning-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.2rem;
+  padding: 10px;
+  background: var(--surface-color-hover);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+}
+
+.learning-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.learning-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+
+.learning-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.learning-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--accent-color);
+  align-self: flex-start;
+}
+
+.skill-tag.ai-glow:hover {
+  box-shadow: 0 0 16px var(--accent-glow);
+  border-color: var(--accent-color);
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+  z-index: 10001;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.5);
+}
+
+/* AI Hero Enhancements */
+[data-portfolio="ai"] .hero-role-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent-color);
+  background: rgba(6, 182, 212, 0.08);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  margin-bottom: 1.25rem;
+}
+
+[data-portfolio="ai"] .pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  animation: pillPulse 2s ease-in-out infinite;
+}
+
+@keyframes pillPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+[data-portfolio="ai"] .ai-profile-ring::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #06b6d4, #8b5cf6, #06b6d4);
+  animation: ringRotate 4s linear infinite;
+  z-index: -1;
+}
+
+[data-portfolio="ai"] .ai-profile-ring::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #06b6d4, #8b5cf6, #06b6d4);
+  filter: blur(12px);
+  opacity: 0.4;
+  animation: ringRotate 4s linear infinite;
+  z-index: -2;
+}
+
+@keyframes ringRotate {
+  to { transform: rotate(360deg); }
+}
+
+[data-portfolio="ai"] .btn-primary {
+  background: var(--gradient-primary);
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.35);
+}
+
+[data-portfolio="ai"] .btn-primary:hover {
+  background: linear-gradient(135deg, #0891b2 0%, #7c3aed 100%);
+  box-shadow: 0 8px 28px rgba(6, 182, 212, 0.3);
+}
+
+[data-portfolio="ai"] .feature-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.04), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+[data-portfolio="ai"] .feature-card:hover::before {
+  opacity: 1;
+}
+
+[data-portfolio="ai"] .stat-glass {
+  padding: 1.5rem 2.5rem;
+  border-radius: 20px;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+[data-portfolio="ai"] .stat-glass:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-glow);
+  box-shadow: var(--shadow-md);
+}
+
+/* Ambient Section Backgrounds */
+.section-ambient {
+  position: relative;
+  overflow: hidden;
+}
+
+.ambient-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.ambient-blob-1 {
+  width: 400px;
+  height: 400px;
+  background: rgba(6, 182, 212, 0.15);
+  top: -100px;
+  left: -100px;
+  animation: blobFloat 12s ease-in-out infinite;
+}
+
+.ambient-blob-2 {
+  width: 350px;
+  height: 350px;
+  background: rgba(139, 92, 246, 0.12);
+  bottom: -80px;
+  right: -80px;
+  animation: blobFloat 15s ease-in-out infinite reverse;
+}
+
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -20px); }
+}
+
+/* Learning Journey — Enhanced */
+[data-portfolio="ai"] .learning-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.learning-card-featured {
+  border-color: rgba(6, 182, 212, 0.15);
+}
+
+.learning-card-featured::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.03), rgba(139, 92, 246, 0.03));
+  pointer-events: none;
+}
+
+.learning-step {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--accent-color);
+  opacity: 0.35;
+}
+
+.learning-card:hover .learning-step {
+  opacity: 0.7;
+}
+
+.learning-card:hover .learning-icon {
+  transform: scale(1.08);
+  background: rgba(6, 182, 212, 0.1);
+}
+
+.learning-icon {
+  transition: all 0.35s var(--ease-smooth);
+}
+
+/* Skills Categories */
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-category-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 1.25rem;
+  opacity: 0.8;
+}
+
+[data-portfolio="ai"] .skills-container {
+  max-width: 100%;
+}
+
+/* AI Project Card Hover */
+[data-portfolio="ai"] .project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.06), rgba(139, 92, 246, 0.04));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+[data-portfolio="ai"] .project-card:hover::after {
+  opacity: 1;
+}
+
+[data-portfolio="ai"] .project-tag {
+  background: rgba(6, 182, 212, 0.08);
+  color: var(--accent-color);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+}
+
+[data-portfolio="ai"] .timeline-content {
+  border-left: 3px solid transparent;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+[data-portfolio="ai"] .timeline-content:hover {
+  border-left-color: var(--accent-color);
+}
+
+@media (max-width: 900px) {
+  [data-portfolio="ai"] .learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  [data-portfolio="ai"] .learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  [data-portfolio="ai"] .stat-glass {
+    padding: 1.25rem 2rem;
+  }
 }
