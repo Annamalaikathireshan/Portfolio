@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+import '../styles/hub.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const site = import.meta.env.SITE;
+const base = import.meta.env.BASE_URL;
+const canonical = new URL(Astro.url.pathname, site);
+const ogImage = new URL(`${base}hero-tech.png`, site).href;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={canonical} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Annamalai Kathiresan",
+    "jobTitle": ["Front-end Architect", "Full Stack Developer", "AI Engineer"],
+    "url": site,
+    "email": "annamalaikathiresan@gmail.com"
+  })} />
+</head>
+<body class="hub-page">
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <slot />
+</body>
+</html>

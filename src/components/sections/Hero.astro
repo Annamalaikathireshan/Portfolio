@@ -1,0 +1,30 @@
+---
+const { data } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const resumeHref = data.resume.startsWith('/') ? `${base}${data.resume.slice(1)}` : data.resume;
+---
+
+<section id="home" class="hero">
+  <canvas id="hero-canvas" class="hero-bg"></canvas>
+  <div class="container hero-content reveal">
+    <div class="profile-img-container profile-ring">
+      <img src={`${base}photo.jpeg`} alt="Annamalai Kathiresan" class="profile-img" />
+    </div>
+    <div class="hero-role-pill">
+      <span class="pill-dot"></span>
+      {data.title}
+    </div>
+    <h1>Hi, I'm <span class="gradient-name">Annamalai Kathiresan</span></h1>
+    <p>{data.tagline}</p>
+    <div class="hero-actions">
+      <a href={data.hero.primaryCta.href} class="btn btn-primary">{data.hero.primaryCta.label}</a>
+      <a
+        href={resumeHref}
+        class="btn btn-outline"
+        download={data.hero.secondaryCta.download ? '' : undefined}
+      >
+        {data.hero.secondaryCta.label}
+      </a>
+    </div>
+  </div>
+</section>

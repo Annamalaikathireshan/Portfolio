@@ -1,0 +1,33 @@
+---
+const { learning } = Astro.props;
+---
+
+<section id="learning" class="learning section-ambient">
+  <div class="ambient-blob ambient-blob-1 parallax-blob" aria-hidden="true"></div>
+  <div class="ambient-blob ambient-blob-2 parallax-blob" aria-hidden="true"></div>
+  <div class="container">
+    <h2 class="section-title">{learning.title}</h2>
+    <p class="section-subtitle reveal">{learning.subtitle}</p>
+    <div class="learning-grid">
+      {learning.items.map((item: {
+        step: string;
+        title: string;
+        description: string;
+        featured?: boolean;
+      }, i: number) => (
+        <div
+          class:list={['learning-card', 'reveal', 'reveal-child', { 'learning-card-featured': item.featured }]}
+          style={`transition-delay: ${i * 60}ms`}
+        >
+          <span class="learning-step">{item.step}</span>
+          <div class="learning-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /></svg>
+          </div>
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+          <span class="learning-badge">Studied</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+---
+const base = import.meta.env.BASE_URL;
+const roles = [
+  { id: 'frontend', label: 'FE', href: `${base}frontend/` },
+  { id: 'fullstack', label: 'FS', href: `${base}fullstack/` },
+  { id: 'ai', label: 'AI', href: `${base}ai/` },
+];
+const { current } = Astro.props;
+---
+
+<div class="role-switcher" role="navigation" aria-label="Role switcher">
+  {roles.map((role) => (
+    <a
+      href={role.href}
+      class:list={[{ active: current === role.id }]}
+      aria-current={current === role.id ? 'page' : undefined}
+    >
+      {role.label}
+    </a>
+  ))}
+</div>

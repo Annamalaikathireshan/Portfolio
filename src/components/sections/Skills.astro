@@ -1,0 +1,25 @@
+---
+const { skills } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<section id="skills" class="skills">
+  <div class="container">
+    <h2 class="section-title">{skills.title}</h2>
+    <div class="skills-categories reveal">
+      {skills.categories.map((cat: { title: string; tags: { label: string; logo?: string }[] }) => (
+        <div class="skill-category">
+          <h3 class="skill-category-title">{cat.title}</h3>
+          <div class="skills-container">
+            {cat.tags.map((tag: { label: string; logo?: string }) => (
+              <div class="skill-tag">
+                {tag.logo && <img src={tag.logo.startsWith('/') ? `${base}${tag.logo.slice(1)}` : tag.logo} width="18" alt="" />}
+                {tag.label}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,135 @@
+{
+  "id": "frontend",
+  "title": "Front-end Architect",
+  "jobTitle": "Senior Front-end Architect",
+  "tagline": "Building scalable, high-performance enterprise UIs with Angular, React, and modern design systems.",
+  "metaDescription": "Portfolio of Annamalai Kathiresan, a Senior Front-end Architect specializing in Angular, React, micro-frontends, and enterprise UI architecture.",
+  "resume": "/Annamalai_Resume.pdf",
+  "hero": {
+    "primaryCta": { "label": "View Architecture Work", "href": "#projects" },
+    "secondaryCta": { "label": "Download Resume", "href": "/Annamalai_Resume.pdf", "download": true }
+  },
+  "about": {
+    "pillars": [
+      {
+        "title": "Architecture & Performance",
+        "description": "Expert in scalable UI architecture — monolithic and micro-frontends. Advanced performance strategies including code splitting, lazy loading, and smart caching.",
+        "icon": "layers"
+      },
+      {
+        "title": "Design Systems & UX",
+        "description": "Pixel-perfect, inclusive interfaces with design system integration, responsive layouts, and Core Web Vitals optimization.",
+        "icon": "heart"
+      },
+      {
+        "title": "Technical Leadership",
+        "description": "Driving Agile delivery, mentoring teams, conducting code reviews, and bridging stakeholders with engineering.",
+        "icon": "users"
+      }
+    ],
+    "stats": [
+      { "value": 5, "label": "Years Exp.", "suffix": "+" },
+      { "value": 10, "label": "Projects", "suffix": "+" },
+      { "value": 100, "label": "Commitment", "suffix": "%" }
+    ]
+  },
+  "skills": {
+    "title": "Technical Arsenal",
+    "categories": [
+      {
+        "title": "Frameworks",
+        "tags": [
+          { "label": "Angular 19", "logo": "https://angular.io/assets/images/logos/angular/angular.svg" },
+          { "label": "React & Next.js", "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+          { "label": "TypeScript", "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" },
+          { "label": "JavaScript (ES6+)", "logo": "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" }
+        ]
+      },
+      {
+        "title": "Architecture & UI",
+        "tags": [
+          { "label": "Micro-frontends" },
+          { "label": "Design Systems" },
+          { "label": "Web Performance" },
+          { "label": "System Design" },
+          { "label": "HTML5 & CSS3" },
+          { "label": "Tailwind CSS" },
+          { "label": "SCSS" },
+          { "label": "Material UI" }
+        ]
+      },
+      {
+        "title": "State & Tooling",
+        "tags": [
+          { "label": "RxJS" },
+          { "label": "NgRx" },
+          { "label": "Redux" },
+          { "label": "Git & GitHub" },
+          { "label": "CI/CD" },
+          { "label": "Bootstrap" }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "items": [
+      {
+        "title": "Tata Communications",
+        "description": "Lead Front-end Architect for enterprise Angular applications. Designed scalable micro-frontends architecture, optimized bundle performance, and managed CI/CD via GitHub Actions.",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/57/Tata_Comm_logo.svg",
+        "tags": ["Angular", "Micro-frontends", "CI/CD"]
+      },
+      {
+        "title": "Comcast Corporation",
+        "description": "Engineered Bulk Invite and Bulk Modem Restart features, improving onboarding efficiency by 75%. Advanced RxJS patterns and NgRx for complex state management.",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Comcast_%282013-2024%29_logo.svg",
+        "tags": ["Angular", "RxJS", "NgRx"]
+      },
+      {
+        "title": "ETS — TOEFL Learn",
+        "description": "Cross-platform mobile app with React Native. AWS Amplify & Cognito authentication. Achieved 90% code reuse across iOS and Android.",
+        "logo": "/toefl-logo.svg",
+        "tags": ["React Native", "AWS Amplify", "Mobile"]
+      },
+      {
+        "title": "Verizon Communications",
+        "description": "Responsive dashboards with Angular and PrimeNG. Adobe Analytics integration. Reduced load times by 30% through rendering optimization.",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/8/83/Verizon_2024.svg",
+        "tags": ["Angular", "PrimeNG", "Analytics"]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Work Experience",
+    "items": [
+      {
+        "role": "Senior Consultant",
+        "company": "Capgemini Technology Services",
+        "date": "Dec 2024 – Present",
+        "description": "Lead Front-end Architect for enterprise products. Delivering licensed Angular products, driving architecture decisions, accessibility compliance, and CI/CD implementation."
+      },
+      {
+        "role": "Senior Application Developer",
+        "company": "Accenture",
+        "date": "Sep 2020 – Dec 2024",
+        "description": "Front-end development across Verizon, ETS, and Comcast. Specialized in Angular and React ecosystems, delivering high-impact features and performance optimizations."
+      }
+    ]
+  },
+  "contact": {
+    "message": "I'm always open to discussing architecture challenges, design system work, or opportunities to lead front-end engineering teams.",
+    "email": "annamalaikathiresan@gmail.com",
+    "socials": [
+      { "label": "GitHub", "href": "https://github.com/annamalai", "icon": "github" },
+      { "label": "LinkedIn", "href": "https://linkedin.com/in/annamalai-kathireshan-3b7020b0", "icon": "linkedin" }
+    ]
+  },
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Contact", "href": "#contact" }
+  ]
+}

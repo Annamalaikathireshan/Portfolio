@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+import '../styles/portfolio.css';
+
+interface Props {
+  title: string;
+  description: string;
+  role?: string;
+  jobTitle?: string;
+}
+
+const { title, description, role, jobTitle } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const site = import.meta.env.SITE;
+const canonical = new URL(Astro.url.pathname, site);
+const ogImage = new URL(`${base}hero-tech.png`, site).href;
+---
+
+<!DOCTYPE html>
+<html lang="en" data-role={role}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={canonical} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  {jobTitle && (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Annamalai Kathiresan",
+      "jobTitle": jobTitle,
+      "url": site,
+      "email": "annamalaikathiresan@gmail.com",
+      "sameAs": [
+        "https://github.com/annamalai",
+        "https://linkedin.com/in/annamalai-kathireshan-3b7020b0"
+      ]
+    })} />
+  )}
+</head>
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <slot />
+</body>
+</html>
