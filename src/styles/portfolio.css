@@ -333,14 +333,6 @@ section {
   gap: 0;
 }
 
-.projects-header {
-  padding-bottom: 0.5rem;
-}
-
-.projects-gallery {
-  position: relative;
-}
-
 /* Pinned horizontal gallery (applied by GSAP matchMedia on >=1024px) */
 .projects-horizontal {
   min-height: 100vh;
@@ -349,8 +341,7 @@ section {
   overflow: hidden;
 }
 
-.projects-horizontal .projects-gallery-inner {
-  max-width: none;
+.projects-horizontal .container {
   width: 100%;
 }
 

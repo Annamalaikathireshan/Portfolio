@@ -152,10 +152,9 @@ function initStatsCountUp() {
 
 /** Pinned horizontal gallery on desktop, staggered vertical stack elsewhere. */
 function initProjectsGallery() {
-  const gallery = document.querySelector('.projects-gallery') as HTMLElement | null;
-  const track = gallery?.querySelector('.case-studies') as HTMLElement | null;
-  const container = gallery?.querySelector('.projects-gallery-inner') as HTMLElement | null;
-  if (!gallery || !track || !container) return;
+  const section = document.querySelector('.projects') as HTMLElement | null;
+  const track = section?.querySelector('.case-studies') as HTMLElement | null;
+  if (!section || !track) return;
 
   const cards = Array.from(track.querySelectorAll('.case-study')) as HTMLElement[];
   if (!cards.length) return;
@@ -163,37 +162,30 @@ function initProjectsGallery() {
   // GSAP owns visibility; clear the .reveal transition-delay inline styles.
   cards.forEach((card) => (card.style.transitionDelay = '0ms'));
 
-  const getScrollDistance = () => {
-    const padRight = parseFloat(getComputedStyle(container).paddingRight) || 20;
-    const trackLeft = track.getBoundingClientRect().left;
-    return Math.max(0, trackLeft + track.scrollWidth - window.innerWidth + padRight);
-  };
-
   const mm = gsap.matchMedia();
 
   mm.add('(min-width: 1024px)', () => {
-    gallery.classList.add('projects-horizontal');
-    gsap.set(track, { x: 0 });
+    section.classList.add('projects-horizontal');
     gsap.set(cards, { opacity: 1, y: 0 });
 
-    let scrollDistance = 0;
-    const measureScrollDistance = () => {
-      gsap.set(track, { x: 0 });
-      scrollDistance = getScrollDistance();
+    // Track uses width: max-content, so scrollWidth === clientWidth; measure
+    // against the space between the track's start position and viewport edge.
+    const container = section.querySelector('.container') as HTMLElement;
+    const distance = () => {
+      const visible = window.innerWidth - container.getBoundingClientRect().left - 48;
+      return Math.max(0, track.scrollWidth - visible);
     };
 
-    ScrollTrigger.addEventListener('refreshInit', measureScrollDistance);
-    measureScrollDistance();
-
     const tween = gsap.to(track, {
-      x: () => -scrollDistance,
+      x: () => -distance(),
       ease: 'none',
       scrollTrigger: {
-        trigger: gallery,
+        trigger: section,
         start: 'top top',
-        end: () => `+=${scrollDistance}`,
+        end: () => `+=${distance()}`,
         pin: true,
-        scrub: true,
+        scrub: 1,
+        anticipatePin: 1,
         invalidateOnRefresh: true,
       },
     });
@@ -218,11 +210,8 @@ function initProjectsGallery() {
       );
     });
 
-    requestAnimationFrame(() => ScrollTrigger.refresh());
-
     return () => {
-      ScrollTrigger.removeEventListener('refreshInit', measureScrollDistance);
-      gallery.classList.remove('projects-horizontal');
+      section.classList.remove('projects-horizontal');
       gsap.set(track, { clearProps: 'all' });
       gsap.set(cards, { clearProps: 'all' });
     };

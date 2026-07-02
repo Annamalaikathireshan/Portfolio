@@ -3,13 +3,10 @@ const { projects, sectionIndex } = Astro.props;
 ---
 
 <section id="projects" class="projects">
-  <div class="container projects-header">
+  <div class="container">
     <p class="section-label reveal">{sectionIndex?.projects || '03'} — work</p>
     <h2 class="section-title reveal">{projects.title}</h2>
-  </div>
-  <div class="projects-gallery">
-    <div class="container projects-gallery-inner">
-      <div class="case-studies">
+    <div class="case-studies">
       {projects.items.map((project: {
         title: string;
         client: string;
@@ -61,7 +58,6 @@ const { projects, sectionIndex } = Astro.props;
           </div>
         </article>
       ))}
-      </div>
     </div>
   </div>
 </section>
