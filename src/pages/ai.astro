@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ScrollProgress from '../components/ui/ScrollProgress.astro';
 import Header from '../components/ui/Header.astro';
-import RoleSwitcher from '../components/ui/RoleSwitcher.astro';
 import Hero from '../components/sections/Hero.astro';
 import About from '../components/sections/About.astro';
 import Learning from '../components/sections/Learning.astro';
@@ -20,23 +19,21 @@ import data from '../data/ai.json';
   jobTitle={data.jobTitle}
 >
   <ScrollProgress />
-  <Header nav={data.nav} current={data.id}>
-    <RoleSwitcher slot="role-switcher" current={data.id} />
-  </Header>
+  <Header nav={data.nav} />
 
   <main>
     <Hero data={data} />
-    <About about={data.about} />
-    {data.learning && <Learning learning={data.learning} />}
-    <Skills skills={data.skills} />
-    <Projects projects={data.projects} />
-    <Experience experience={data.experience} />
-    <Contact contact={data.contact} />
+    <About about={data.about} sectionIndex={data.sectionIndex} />
+    {data.learning && <Learning learning={data.learning} sectionIndex={data.sectionIndex} />}
+    <Skills skills={data.skills} sectionIndex={data.sectionIndex} />
+    <Projects projects={data.projects} sectionIndex={data.sectionIndex} />
+    <Experience experience={data.experience} sectionIndex={data.sectionIndex} />
+    <Contact contact={data.contact} sectionIndex={data.sectionIndex} />
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Annamalai Kathiresan. All rights reserved.</p>
+      <p>© 2026 Annamalai Kathiresan</p>
     </div>
   </footer>
 

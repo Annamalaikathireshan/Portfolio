@@ -2,151 +2,143 @@
   "id": "ai",
   "title": "AI Engineer",
   "jobTitle": "AI Engineer",
-  "tagline": "Building intelligent applications with Large Language Models, RAG pipelines, and modern machine learning — bridging research and production-ready systems.",
-  "metaDescription": "Portfolio of Annamalai Kathiresan, an AI Engineer specializing in LLMs, RAG pipelines, machine learning, and intelligent applications.",
+  "tagline": "I build LLM-powered systems — RAG pipelines, classifiers, and agent workflows — with the same engineering discipline I spent 5 years applying to production web platforms.",
+  "metaDescription": "Annamalai Kathiresan — AI Engineer. LLMs, RAG pipelines, PyTorch, LangChain, and production AI applications.",
   "resume": "/Annamalai_Kathireshan_AI_Engineer.pdf",
+  "sectionIndex": {
+    "about": "01",
+    "learning": "02",
+    "skills": "03",
+    "projects": "04",
+    "experience": "05",
+    "contact": "06"
+  },
   "hero": {
-    "primaryCta": { "label": "Explore My Journey", "href": "#learning" },
-    "secondaryCta": { "label": "Download Resume", "href": "/Annamalai_Kathireshan_AI_Engineer.pdf", "download": true }
+    "primaryCta": { "label": "view projects", "href": "#projects" },
+    "secondaryCta": { "label": "resume.pdf", "href": "/Annamalai_Kathireshan_AI_Engineer.pdf", "download": true }
   },
   "about": {
-    "pillars": [
-      {
-        "title": "LLM Engineering",
-        "description": "Deep expertise in Large Language Models, prompt engineering, and context optimization. Building production-grade AI applications with RAG and intelligent agent workflows.",
-        "icon": "cube"
-      },
-      {
-        "title": "ML Foundations",
-        "description": "Strong grounding in machine learning fundamentals, deep learning architectures, and neural network training with Python ML ecosystems.",
-        "icon": "clock"
-      },
-      {
-        "title": "AI Systems Architecture",
-        "description": "Designing end-to-end AI pipelines — from embedding generation and vector search to API integration and deployment.",
-        "icon": "layers"
-      }
-    ],
+    "prose": "I moved into AI engineering from 5 years of production software — Angular frontends and Spring Boot backends for Tata, Comcast, and Verizon. That background is the point: I approach ML systems as software that has to ship, so API design, error handling, evaluation, and deployment get the same weight as model quality. My focus is RAG systems, NLP classifiers, and agent workflows built end to end.",
     "stats": [
-      { "value": 9, "label": "Topics Mastered", "suffix": "+" },
-      { "value": 5, "label": "Hands-on Projects", "suffix": "+" },
-      { "value": 100, "label": "Passion for AI", "suffix": "%" }
+      { "value": 9, "label": "ML topics studied", "suffix": "" },
+      { "value": 4, "label": "hands-on AI projects", "suffix": "" },
+      { "value": 5, "label": "years software engineering", "suffix": "+" }
     ]
   },
   "learning": {
-    "title": "Learning Journey",
-    "subtitle": "A curated path through the AI/ML landscape — from core fundamentals to cutting-edge generative systems.",
+    "title": "Learning log",
+    "subtitle": "A structured self-study path — fundamentals through production LLM systems, each step paired with hands-on code.",
     "items": [
-      { "step": "01", "title": "Machine Learning Fundamentals", "description": "Supervised and unsupervised learning, feature engineering, cross-validation, and model evaluation metrics.", "featured": true },
-      { "step": "02", "title": "Deep Learning & Neural Networks", "description": "Network architectures, backpropagation, activation functions, and end-to-end training pipelines." },
-      { "step": "03", "title": "Natural Language Processing", "description": "Tokenization, word embeddings, transformer architectures, and text classification techniques." },
-      { "step": "04", "title": "Large Language Models", "description": "GPT architecture, prompt engineering, few-shot learning, context windows, and token optimization.", "featured": true },
-      { "step": "05", "title": "Generative AI", "description": "Text and image generation, diffusion model concepts, multimodal AI, and creative AI applications." },
-      { "step": "06", "title": "RAG & Embeddings", "description": "Vector databases, semantic search, embedding models, chunking strategies, and retrieval pipelines.", "featured": true },
-      { "step": "07", "title": "Python for ML", "description": "NumPy, Pandas, scikit-learn, data preprocessing, exploratory analysis, and ML workflow automation." },
-      { "step": "08", "title": "PyTorch & TensorFlow", "description": "Model building, custom training loops, tensor operations, and deployment fundamentals." },
-      { "step": "09", "title": "AI Agents & Tool Use", "description": "LangChain orchestration, multi-step agent workflows, tool calling, and MCP integration patterns." }
+      { "step": "01", "title": "Machine Learning Fundamentals", "description": "Supervised/unsupervised learning, feature engineering, cross-validation, evaluation metrics." },
+      { "step": "02", "title": "Deep Learning & Neural Networks", "description": "Architectures, backpropagation, training loops, activation functions." },
+      { "step": "03", "title": "Natural Language Processing", "description": "Tokenization, embeddings, transformers, text classification." },
+      { "step": "04", "title": "Large Language Models", "description": "GPT architecture, prompt engineering, context windows, token optimization." },
+      { "step": "05", "title": "Generative AI", "description": "Text generation, diffusion concepts, multimodal applications." },
+      { "step": "06", "title": "RAG & Embeddings", "description": "Vector search, chunking strategies, retrieval pipelines, embedding models." },
+      { "step": "07", "title": "Python for ML", "description": "NumPy, Pandas, scikit-learn, preprocessing, EDA workflows." },
+      { "step": "08", "title": "PyTorch & TensorFlow", "description": "Model building, custom training loops, tensor operations." },
+      { "step": "09", "title": "AI Agents & Tool Use", "description": "LangChain orchestration, tool calling, multi-step agent workflows." }
     ]
   },
   "skills": {
-    "title": "Technical Arsenal",
+    "title": "Stack",
     "categories": [
       {
-        "title": "ML & Frameworks",
-        "tags": [
-          { "label": "Python", "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" },
-          { "label": "PyTorch" },
-          { "label": "TensorFlow" },
-          { "label": "scikit-learn" },
-          { "label": "NumPy & Pandas" },
-          { "label": "Deep Learning" }
-        ]
+        "title": "ml",
+        "items": ["Python", "PyTorch", "TensorFlow", "scikit-learn", "NumPy", "Pandas"]
       },
       {
-        "title": "LLMs & GenAI",
-        "tags": [
-          { "label": "Large Language Models" },
-          { "label": "Prompt Engineering" },
-          { "label": "Generative AI" },
-          { "label": "OpenAI API" },
-          { "label": "Hugging Face" },
-          { "label": "NLP" }
-        ]
+        "title": "llms",
+        "items": ["Prompt Engineering", "OpenAI API", "Hugging Face", "NLP", "Fine-tuning"]
       },
       {
-        "title": "AI Systems",
-        "tags": [
-          { "label": "RAG Pipelines" },
-          { "label": "Vector Embeddings" },
-          { "label": "LangChain" },
-          { "label": "AI Agents" },
-          { "label": "RESTful APIs" },
-          { "label": "Docker" },
-          { "label": "Git & GitHub" }
-        ]
+        "title": "systems",
+        "items": ["RAG Pipelines", "Vector Embeddings", "LangChain", "AI Agents", "REST APIs", "Docker"]
       }
     ]
   },
   "projects": {
-    "title": "Hands-on Explorations",
+    "title": "Projects",
     "items": [
       {
         "title": "RAG Knowledge Assistant",
-        "description": "Built a retrieval-augmented generation pipeline with vector embeddings, semantic chunking, and LLM-powered Q&A over custom document collections.",
-        "icon": "database",
-        "tags": ["RAG", "Embeddings", "LLM"]
+        "client": "Personal project",
+        "period": "2025",
+        "context": "Question answering over custom document collections without fine-tuning a model.",
+        "built": "Retrieval pipeline with semantic chunking, vector embeddings, and LLM answer generation — with source attribution wired through so every answer cites the chunks it came from.",
+        "outcome": "Accurate answers on domain-specific content with per-chunk citations; retrieval quality measured against a hand-built eval set.",
+        "stack": ["RAG", "Embeddings", "OpenAI API"],
+        "link": "https://github.com/annamalaikathireshan"
       },
       {
         "title": "Sentiment Classifier",
-        "description": "Developed an NLP sentiment analysis model using scikit-learn and PyTorch, with text preprocessing, feature extraction, and accuracy benchmarking.",
-        "icon": "book",
-        "tags": ["NLP", "PyTorch", "scikit-learn"]
+        "client": "Personal project",
+        "period": "2025",
+        "context": "Binary sentiment analysis on short text, built to compare classical ML against neural approaches honestly.",
+        "built": "One preprocessing pipeline feeding both a scikit-learn baseline and a PyTorch neural classifier, evaluated on the same held-out test set.",
+        "outcome": "Documented accuracy comparison between the two approaches, including where the simpler model wins.",
+        "stack": ["NLP", "PyTorch", "scikit-learn"],
+        "link": "https://github.com/annamalaikathireshan"
       },
       {
         "title": "LLM Agent Workflow",
-        "description": "Designed a multi-step AI agent with LangChain that orchestrates tool calling, memory management, and autonomous task completion.",
-        "icon": "agent",
-        "tags": ["LangChain", "AI Agents", "Tool Use"]
+        "client": "Personal project",
+        "period": "2025",
+        "context": "Multi-step task completion requiring tool calls and memory across turns.",
+        "built": "LangChain agent with tool calling, conversation memory, structured output parsing, and fallback handling when a tool call fails mid-task.",
+        "outcome": "Reliable multi-step execution — failed tool calls degrade gracefully instead of derailing the run.",
+        "stack": ["LangChain", "AI Agents", "Tool Use"],
+        "link": "https://github.com/annamalaikathireshan"
       },
       {
         "title": "Fine-tuning Experiment",
-        "description": "Explored domain-specific model adaptation using transfer learning techniques, evaluating performance on custom datasets with Hugging Face transformers.",
-        "icon": "star",
-        "tags": ["Fine-tuning", "Hugging Face", "Transformers"]
+        "client": "Personal project",
+        "period": "2025",
+        "context": "Domain adaptation on a small custom dataset using transfer learning.",
+        "built": "Hugging Face transformers fine-tuning pipeline with a frozen baseline, held-out evaluation, and experiment tracking across runs.",
+        "outcome": "Measured performance lift over the zero-shot baseline on domain-specific queries.",
+        "stack": ["Fine-tuning", "Hugging Face", "Transformers"],
+        "link": "https://github.com/annamalaikathireshan"
       }
     ]
   },
   "experience": {
-    "title": "Work Experience",
+    "title": "Experience",
     "items": [
       {
         "role": "Senior Consultant",
         "company": "Capgemini Technology Services",
         "date": "Dec 2024 – Present",
-        "description": "Lead architect for enterprise products. Designing scalable API-driven architectures and CI/CD pipelines — foundational skills for deploying and integrating AI services at enterprise scale."
+        "highlights": [
+          "Architect API-driven systems at Tata Communications — the same integration patterns used to put AI services into production",
+          "CI/CD and observability practices that transfer directly to ML model deployment pipelines"
+        ]
       },
       {
         "role": "Senior Application Developer",
         "company": "Accenture",
         "date": "Sep 2020 – Dec 2024",
-        "description": "Built data-driven dashboards with Adobe Analytics integration for Verizon, and delivered high-performance enterprise applications. Experience with large-scale data visualization directly applicable to AI/ML product development."
+        "highlights": [
+          "Built data-heavy analytics dashboards at Verizon — practical experience with large-scale data pipelines",
+          "Shipped production Angular/React apps with the reliability standards AI products need"
+        ]
       }
     ]
   },
   "contact": {
-    "message": "I'm always open to discussing AI projects, research collaborations, or opportunities to build intelligent systems together.",
-    "email": "annamalaikathiresan@gmail.com",
+    "message": "Open to AI engineering roles and RAG system work — especially teams that want someone who can ship the whole system, not just the notebook.",
+    "email": "annamalaikathireshan@gmail.com",
     "socials": [
-      { "label": "GitHub", "href": "https://github.com/annamalai", "icon": "github" },
+      { "label": "GitHub", "href": "https://github.com/annamalaikathireshan", "icon": "github" },
       { "label": "LinkedIn", "href": "https://linkedin.com/in/annamalai-kathireshan-3b7020b0", "icon": "linkedin" }
     ]
   },
   "nav": [
-    { "label": "About", "href": "#about" },
-    { "label": "Learning", "href": "#learning" },
-    { "label": "Skills", "href": "#skills" },
-    { "label": "Projects", "href": "#projects" },
-    { "label": "Experience", "href": "#experience" },
-    { "label": "Contact", "href": "#contact" }
+    { "label": "about", "href": "#about" },
+    { "label": "learning", "href": "#learning" },
+    { "label": "stack", "href": "#skills" },
+    { "label": "projects", "href": "#projects" },
+    { "label": "experience", "href": "#experience" },
+    { "label": "contact", "href": "#contact" }
   ]
 }

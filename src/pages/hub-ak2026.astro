@@ -1,0 +1,28 @@
+---
+import HubLayout from '../layouts/HubLayout.astro';
+import PortfolioCard from '../components/hub/PortfolioCard.astro';
+import hub from '../data/hub.json';
+---
+
+<HubLayout
+  title="Annamalai Kathiresan | Portfolio Hub"
+  description="Private portfolio hub."
+  noindex={true}
+>
+  <div class="hub-container">
+    <div class="hub-terminal">
+      <p class="hub-domain">{hub.domain}</p>
+      <p class="hub-divider" aria-hidden="true">────────────────────────────</p>
+      <p class="hub-prompt"><span>&gt;</span> select portfolio:</p>
+    </div>
+    <p class="hub-tagline">{hub.tagline}</p>
+
+    <div class="portfolio-list reveal">
+      {hub.cards.map((card) => (
+        <PortfolioCard card={card} />
+      ))}
+    </div>
+  </div>
+
+  <script src="../scripts/hub.ts"></script>
+</HubLayout>

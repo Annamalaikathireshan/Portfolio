@@ -1,11 +1,11 @@
 ---
-const base = import.meta.env.BASE_URL;
-const { nav, current } = Astro.props;
+const { nav } = Astro.props;
 ---
 
 <header>
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
   <div class="container nav-container">
-    <a href={`${base}`} class="logo">AK<span>.</span></a>
+    <a href="#top" class="logo">AK<span>.</span></a>
     <nav>
       <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
         <span></span>
@@ -13,13 +13,9 @@ const { nav, current } = Astro.props;
         <span></span>
       </button>
       <ul id="nav-links">
-        <li><a href={`${base}`}>Home</a></li>
         {nav.map((item: { label: string; href: string }) => (
           <li><a href={item.href}>{item.label}</a></li>
         ))}
-        <li>
-          <slot name="role-switcher" />
-        </li>
       </ul>
     </nav>
   </div>

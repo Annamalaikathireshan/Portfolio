@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import './tokens.css';
 
 *, *::before, *::after {
@@ -21,71 +21,42 @@ html.lenis, html.lenis body {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: var(--bg-dark);
+  font-family: var(--font-sans);
+  background: var(--bg);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
   min-height: 100vh;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  width: 200%;
-  height: 200%;
-  background:
-    radial-gradient(circle at 20% 20%, var(--mesh-1) 0%, transparent 35%),
-    radial-gradient(circle at 80% 30%, var(--mesh-2) 0%, transparent 35%),
-    radial-gradient(circle at 50% 80%, var(--mesh-3) 0%, transparent 40%),
-    radial-gradient(circle at 70% 60%, var(--mesh-4) 0%, transparent 40%);
-  z-index: -2;
-  animation: meshRotate 25s linear infinite;
-  pointer-events: none;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(ellipse at center, transparent 30%, var(--bg-dark) 80%);
-  z-index: -1;
-  pointer-events: none;
-}
-
-@keyframes meshRotate {
-  from { transform: translate(-25%, -25%) rotate(0deg); }
-  to { transform: translate(-25%, -25%) rotate(360deg); }
 }
 
 .grid-overlay {
   position: fixed;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
   z-index: 0;
   pointer-events: none;
-}
-
-.cursor-spotlight {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), var(--accent-glow), transparent 60%);
   opacity: 0.5;
 }
 
-.parallax-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  pointer-events: none;
-  will-change: transform;
+/* Per-role backdrop identity */
+[data-role="frontend"] .grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+[data-role="fullstack"] .grid-overlay {
+  background-image: radial-gradient(circle, rgba(var(--accent-rgb), 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+[data-role="ai"] .grid-overlay {
+  background-image:
+    radial-gradient(ellipse 70% 45% at 50% 0%, var(--accent-glow), transparent 70%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 24px 24px;
 }
 
 a {
@@ -101,69 +72,49 @@ img {
 .container {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
   width: 100%;
 }
 
-.section-title {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Initial hidden states below are taken over by GSAP (no CSS transitions,
+   so tweened inline styles are never interpolated twice). */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s var(--ease-smooth), transform 0.8s var(--ease-smooth);
 }
 
-.section-title.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section-title::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
-  background: var(--gradient-primary);
-  margin: 0.75rem auto 0;
-  border-radius: 2px;
-  transition: width 0.8s var(--ease-out-back) 0.2s;
-}
-
-.section-title.visible::after {
-  width: 60px;
+.section-title {
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 650;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
 .section-subtitle {
-  text-align: center;
   color: var(--text-secondary);
-  max-width: 600px;
-  margin: -2rem auto 3rem;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
+  margin: -1.5rem 0 2rem;
+  max-width: 540px;
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s var(--ease-smooth), transform 0.7s var(--ease-smooth);
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-child {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.5s var(--ease-smooth), transform 0.5s var(--ease-smooth);
-}
-
+.reveal.active,
 .reveal-child.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 .btn {
@@ -171,61 +122,97 @@ img {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.875rem 1.75rem;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s, background 0.3s;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
   cursor: pointer;
-  border: none;
   will-change: transform;
 }
 
 .btn-primary {
-  background: var(--gradient-primary);
-  color: white;
-  box-shadow: 0 4px 20px var(--accent-glow);
+  background: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 8px 30px var(--accent-glow);
+  filter: brightness(1.1);
 }
 
 .btn-outline {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
+  background: transparent;
+  border: 1px solid var(--border);
   color: var(--text-primary);
-  backdrop-filter: blur(12px);
 }
 
 .btn-outline:hover {
-  background: var(--glass-hover);
   border-color: var(--accent);
+  color: var(--accent);
+}
+
+code, .code-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  background: var(--accent-dim);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius);
 }
 
 footer {
   padding: 2rem 0;
-  text-align: center;
+  text-align: left;
   color: var(--text-muted);
-  font-size: 0.875rem;
-  border-top: 1px solid var(--glass-border);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  border-top: 1px solid var(--border);
   position: relative;
   z-index: 1;
 }
 
+.page-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Safety net: if scripts never run, the overlay removes itself. */
+  animation: page-intro-fallback 0.4s ease 2.5s forwards;
+}
+
+.page-intro-mark {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.page-intro-dot {
+  color: var(--accent);
+}
+
+@keyframes page-intro-fallback {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  body::before {
-    animation: none;
+  .reveal, .reveal-child, .section-title, .section-label,
+  .skill-row, .experience-entry, .timeline-line {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 
-  .reveal, .reveal-child, .section-title {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
-  .section-title::after {
-    width: 60px;
-    transition: none;
+  .page-intro {
+    display: none;
   }
 }

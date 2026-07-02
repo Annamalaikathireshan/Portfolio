@@ -4,17 +4,9 @@ const { strip } = Astro.props;
 
 <div class="architecture-strip reveal">
   {strip.layers.map((layer: string, i: number) => (
-    <span class="arch-segment">
+    <>
       {i > 0 && <span class="arch-arrow" aria-hidden="true">→</span>}
       <span class="arch-layer">{layer}</span>
-    </span>
+    </>
   ))}
 </div>
-
-<style>
-  .arch-segment {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-</style>

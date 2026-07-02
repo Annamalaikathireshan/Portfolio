@@ -1,53 +1,3 @@
-export function initScrollProgress() {
-  const bar = document.getElementById('scroll-progress');
-  if (!bar) return;
-
-  window.addEventListener(
-    'scroll',
-    () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      (bar as HTMLElement).style.width = `${progress}%`;
-    },
-    { passive: true }
-  );
-}
-
-export function initCountUp() {
-  const stats = document.querySelectorAll('.stat-number');
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const target = +(entry.target.getAttribute('data-target') || 0);
-          const suffix = entry.target.getAttribute('data-suffix') || '';
-          const duration = 2000;
-          const increment = target / (duration / 16);
-          let current = 0;
-
-          const update = () => {
-            current += increment;
-            if (current < target) {
-              entry.target.textContent = Math.ceil(current) + suffix;
-              requestAnimationFrame(update);
-            } else {
-              entry.target.textContent = target + suffix;
-            }
-          };
-
-          update();
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  stats.forEach((stat) => observer.observe(stat));
-}
-
 export function initActiveNav() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('#nav-links a[href^="#"]');
@@ -73,19 +23,26 @@ export function initActiveNav() {
 export function initMobileMenu() {
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
+  const backdrop = document.getElementById('nav-backdrop');
   if (!hamburger || !navLinks) return;
+
+  const close = () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    backdrop?.classList.remove('active');
+  };
 
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
+    backdrop?.classList.toggle('active', navLinks.classList.contains('active'));
   });
 
   navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
-    });
+    link.addEventListener('click', close);
   });
+
+  backdrop?.addEventListener('click', close);
 
   document.addEventListener('click', (e) => {
     if (
@@ -93,8 +50,7 @@ export function initMobileMenu() {
       !hamburger.contains(e.target as Node) &&
       navLinks.classList.contains('active')
     ) {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
+      close();
     }
   });
 }

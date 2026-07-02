@@ -1,31 +1,20 @@
 ---
-const { learning } = Astro.props;
+const { learning, sectionIndex } = Astro.props;
 ---
 
-<section id="learning" class="learning section-ambient">
-  <div class="ambient-blob ambient-blob-1 parallax-blob" aria-hidden="true"></div>
-  <div class="ambient-blob ambient-blob-2 parallax-blob" aria-hidden="true"></div>
+<section id="learning" class="learning">
   <div class="container">
-    <h2 class="section-title">{learning.title}</h2>
-    <p class="section-subtitle reveal">{learning.subtitle}</p>
-    <div class="learning-grid">
-      {learning.items.map((item: {
-        step: string;
-        title: string;
-        description: string;
-        featured?: boolean;
-      }, i: number) => (
-        <div
-          class:list={['learning-card', 'reveal', 'reveal-child', { 'learning-card-featured': item.featured }]}
-          style={`transition-delay: ${i * 60}ms`}
-        >
-          <span class="learning-step">{item.step}</span>
-          <div class="learning-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /></svg>
+    <p class="section-label reveal">{sectionIndex?.learning || '02'} — learning log</p>
+    <h2 class="section-title reveal">{learning.title}</h2>
+    {learning.subtitle && <p class="section-subtitle reveal">{learning.subtitle}</p>}
+    <div class="learning-log">
+      {learning.items.map((item: { step: string; title: string; description: string }, i: number) => (
+        <div class="learning-entry reveal reveal-child" style={`transition-delay: ${i * 50}ms`}>
+          <span class="learning-index">{item.step}</span>
+          <div>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
           </div>
-          <h3>{item.title}</h3>
-          <p>{item.description}</p>
-          <span class="learning-badge">Studied</span>
         </div>
       ))}
     </div>

@@ -2,134 +2,124 @@
   "id": "frontend",
   "title": "Front-end Architect",
   "jobTitle": "Senior Front-end Architect",
-  "tagline": "Building scalable, high-performance enterprise UIs with Angular, React, and modern design systems.",
-  "metaDescription": "Portfolio of Annamalai Kathiresan, a Senior Front-end Architect specializing in Angular, React, micro-frontends, and enterprise UI architecture.",
+  "tagline": "I architect Angular and React frontends for telecom and education clients — micro-frontends, performance budgets, and design systems that scale past a single team.",
+  "metaDescription": "Annamalai Kathiresan — Senior Front-end Architect. Angular, React, micro-frontends at Tata Communications, Comcast, ETS, and Verizon.",
   "resume": "/Annamalai_Resume.pdf",
+  "sectionIndex": {
+    "about": "01",
+    "skills": "02",
+    "projects": "03",
+    "experience": "04",
+    "contact": "05"
+  },
   "hero": {
-    "primaryCta": { "label": "View Architecture Work", "href": "#projects" },
-    "secondaryCta": { "label": "Download Resume", "href": "/Annamalai_Resume.pdf", "download": true }
+    "primaryCta": { "label": "view work", "href": "#projects" },
+    "secondaryCta": { "label": "resume.pdf", "href": "/Annamalai_Resume.pdf", "download": true }
   },
   "about": {
-    "pillars": [
-      {
-        "title": "Architecture & Performance",
-        "description": "Expert in scalable UI architecture — monolithic and micro-frontends. Advanced performance strategies including code splitting, lazy loading, and smart caching.",
-        "icon": "layers"
-      },
-      {
-        "title": "Design Systems & UX",
-        "description": "Pixel-perfect, inclusive interfaces with design system integration, responsive layouts, and Core Web Vitals optimization.",
-        "icon": "heart"
-      },
-      {
-        "title": "Technical Leadership",
-        "description": "Driving Agile delivery, mentoring teams, conducting code reviews, and bridging stakeholders with engineering.",
-        "icon": "users"
-      }
-    ],
+    "prose": "I'm a front-end architect with 5 years shipping UI for enterprise clients. Most of my work sits in Angular — module federation, lazy loading, NgRx state — with React and React Native on select projects. I care about bundle size, Core Web Vitals, and making complex enterprise workflows feel effortless for the people using them every day.",
     "stats": [
-      { "value": 5, "label": "Years Exp.", "suffix": "+" },
-      { "value": 10, "label": "Projects", "suffix": "+" },
-      { "value": 100, "label": "Commitment", "suffix": "%" }
+      { "value": 5, "label": "years shipping UI", "suffix": "+" },
+      { "value": 4, "label": "enterprise clients", "suffix": "" },
+      { "value": 75, "label": "onboarding speed gain (Comcast)", "suffix": "%" }
     ]
   },
   "skills": {
-    "title": "Technical Arsenal",
+    "title": "Stack",
     "categories": [
       {
-        "title": "Frameworks",
-        "tags": [
-          { "label": "Angular 19", "logo": "https://angular.io/assets/images/logos/angular/angular.svg" },
-          { "label": "React & Next.js", "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
-          { "label": "TypeScript", "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" },
-          { "label": "JavaScript (ES6+)", "logo": "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" }
-        ]
+        "title": "frameworks",
+        "items": ["Angular 19", "React", "Next.js", "TypeScript", "JavaScript"]
       },
       {
-        "title": "Architecture & UI",
-        "tags": [
-          { "label": "Micro-frontends" },
-          { "label": "Design Systems" },
-          { "label": "Web Performance" },
-          { "label": "System Design" },
-          { "label": "HTML5 & CSS3" },
-          { "label": "Tailwind CSS" },
-          { "label": "SCSS" },
-          { "label": "Material UI" }
-        ]
+        "title": "architecture",
+        "items": ["Micro-frontends", "Module Federation", "Design Systems", "Code Splitting", "Web Performance"]
       },
       {
-        "title": "State & Tooling",
-        "tags": [
-          { "label": "RxJS" },
-          { "label": "NgRx" },
-          { "label": "Redux" },
-          { "label": "Git & GitHub" },
-          { "label": "CI/CD" },
-          { "label": "Bootstrap" }
-        ]
+        "title": "tooling",
+        "items": ["RxJS", "NgRx", "Redux", "GitHub Actions", "SCSS", "Tailwind"]
       }
     ]
   },
   "projects": {
-    "title": "Featured Projects",
+    "title": "Selected work",
     "items": [
       {
-        "title": "Tata Communications",
-        "description": "Lead Front-end Architect for enterprise Angular applications. Designed scalable micro-frontends architecture, optimized bundle performance, and managed CI/CD via GitHub Actions.",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/57/Tata_Comm_logo.svg",
-        "tags": ["Angular", "Micro-frontends", "CI/CD"]
+        "title": "Tata Communications — Micro-frontend Platform",
+        "client": "Tata Communications",
+        "period": "2024–present",
+        "context": "A licensed Angular product suite where multiple teams ship features into one shell application.",
+        "built": "Module federation architecture with independently deployable remotes, shared design tokens, route-level code splitting, and a lazy-loading strategy tuned per feature module.",
+        "outcome": "Teams deploy their modules independently without shell releases, and initial bundle size dropped enough to hit the product's load-time budget on low-bandwidth enterprise networks.",
+        "stack": ["Angular", "Module Federation", "GitHub Actions"]
       },
       {
-        "title": "Comcast Corporation",
-        "description": "Engineered Bulk Invite and Bulk Modem Restart features, improving onboarding efficiency by 75%. Advanced RxJS patterns and NgRx for complex state management.",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Comcast_%282013-2024%29_logo.svg",
-        "tags": ["Angular", "RxJS", "NgRx"]
+        "title": "Comcast — Bulk Operations UI",
+        "client": "Comcast Corporation",
+        "period": "2022–2024",
+        "context": "Field operations teams were onboarding customer accounts one at a time through a slow manual flow.",
+        "built": "Bulk Invite and Bulk Modem Restart flows — NgRx-orchestrated wizards with optimistic UI, RxJS-batched requests, and inline per-row error recovery so one failure never blocked a batch.",
+        "outcome": "75% faster onboarding for bulk operations; the flow became the default path for field teams.",
+        "stack": ["Angular", "NgRx", "RxJS"]
       },
       {
-        "title": "ETS — TOEFL Learn",
-        "description": "Cross-platform mobile app with React Native. AWS Amplify & Cognito authentication. Achieved 90% code reuse across iOS and Android.",
-        "logo": "/toefl-logo.svg",
-        "tags": ["React Native", "AWS Amplify", "Mobile"]
+        "title": "ETS — TOEFL Learn Mobile App",
+        "client": "Educational Testing Service",
+        "period": "2021–2022",
+        "context": "TOEFL exam preparation app that had to ship simultaneously on iOS and Android with a small team.",
+        "built": "React Native component library with a single design language, shared navigation and state layers, and platform-specific overrides kept to the edges.",
+        "outcome": "90% code reuse between iOS and Android builds — one team shipped both stores on the same release cycle.",
+        "stack": ["React Native", "TypeScript", "Component Library"]
       },
       {
-        "title": "Verizon Communications",
-        "description": "Responsive dashboards with Angular and PrimeNG. Adobe Analytics integration. Reduced load times by 30% through rendering optimization.",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/8/83/Verizon_2024.svg",
-        "tags": ["Angular", "PrimeNG", "Analytics"]
+        "title": "Verizon — Operations Dashboard",
+        "client": "Verizon Communications",
+        "period": "2020–2021",
+        "context": "Internal ops teams tracking service metrics on dashboards that were slow to first paint.",
+        "built": "Angular + PrimeNG dashboards rebuilt around lazy routes, OnPush change detection, virtualized tables, and an Adobe Analytics event layer for usage insight.",
+        "outcome": "30% reduction in initial load time and smooth interaction on data-dense views.",
+        "stack": ["Angular", "PrimeNG", "Adobe Analytics"]
       }
     ]
   },
   "experience": {
-    "title": "Work Experience",
+    "title": "Experience",
     "items": [
       {
         "role": "Senior Consultant",
         "company": "Capgemini Technology Services",
         "date": "Dec 2024 – Present",
-        "description": "Lead Front-end Architect for enterprise products. Delivering licensed Angular products, driving architecture decisions, accessibility compliance, and CI/CD implementation."
+        "highlights": [
+          "Lead front-end architect on licensed Angular products for Tata Communications",
+          "Own the module federation strategy, shared design system, and front-end CI/CD via GitHub Actions",
+          "Drive accessibility compliance and code review standards across the UI team"
+        ]
       },
       {
         "role": "Senior Application Developer",
         "company": "Accenture",
         "date": "Sep 2020 – Dec 2024",
-        "description": "Front-end development across Verizon, ETS, and Comcast. Specialized in Angular and React ecosystems, delivering high-impact features and performance optimizations."
+        "highlights": [
+          "Shipped UI for Verizon, ETS, and Comcast under tight enterprise release cycles",
+          "Built Bulk Invite and Bulk Modem Restart — 75% onboarding improvement at Comcast",
+          "Made performance profiling and bundle analysis a standing practice on every codebase I owned"
+        ]
       }
     ]
   },
   "contact": {
-    "message": "I'm always open to discussing architecture challenges, design system work, or opportunities to lead front-end engineering teams.",
-    "email": "annamalaikathiresan@gmail.com",
+    "message": "Open to front-end architecture roles, design system work, or talking through a hard UI performance problem.",
+    "email": "annamalaikathireshan@gmail.com",
     "socials": [
-      { "label": "GitHub", "href": "https://github.com/annamalai", "icon": "github" },
+      { "label": "GitHub", "href": "https://github.com/annamalaikathireshan", "icon": "github" },
       { "label": "LinkedIn", "href": "https://linkedin.com/in/annamalai-kathireshan-3b7020b0", "icon": "linkedin" }
     ]
   },
   "nav": [
-    { "label": "About", "href": "#about" },
-    { "label": "Skills", "href": "#skills" },
-    { "label": "Projects", "href": "#projects" },
-    { "label": "Experience", "href": "#experience" },
-    { "label": "Contact", "href": "#contact" }
+    { "label": "about", "href": "#about" },
+    { "label": "stack", "href": "#skills" },
+    { "label": "work", "href": "#projects" },
+    { "label": "experience", "href": "#experience" },
+    { "label": "contact", "href": "#contact" }
   ]
 }

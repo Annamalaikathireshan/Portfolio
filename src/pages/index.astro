@@ -1,24 +1,25 @@
 ---
 import HubLayout from '../layouts/HubLayout.astro';
-import PortfolioCard from '../components/hub/PortfolioCard.astro';
 import hub from '../data/hub.json';
 ---
 
 <HubLayout
-  title="Annamalai Kathiresan | Portfolio Selection"
-  description="Choose a specialized portfolio — Front-end Architect, Full Stack Developer, or AI Engineer."
+  title="Annamalai Kathiresan"
+  description="Software engineer — 5 years building products across telecom, education, and enterprise."
 >
-  <div class="hub-container">
-    <p class="hub-eyebrow">Portfolio Hub</p>
-    <h1 class="hub-title">{hub.name}</h1>
-    <p class="hub-tagline">{hub.tagline}</p>
-    <p class="hub-subtitle">{hub.subtitle}</p>
-
-    <div class="portfolio-grid reveal">
-      {hub.cards.map((card) => (
-        <PortfolioCard card={card} />
-      ))}
+  <div class="hub-container neutral-landing">
+    <div class="hub-terminal">
+      <p class="hub-domain">{hub.domain}</p>
+      <p class="hub-divider" aria-hidden="true">────────────────────────────</p>
+      <p class="hub-prompt"><span>&gt;</span> whoami</p>
     </div>
+    <h1 class="neutral-name">Annamalai Kathiresan</h1>
+    <p class="hub-tagline">
+      Software engineer — 5 years building products across telecom, education, and enterprise.
+    </p>
+    <a class="neutral-email" href="mailto:annamalaikathireshan@gmail.com">
+      annamalaikathireshan@gmail.com
+    </a>
   </div>
 
   <script src="../scripts/hub.ts"></script>

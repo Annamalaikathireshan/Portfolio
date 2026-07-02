@@ -2,134 +2,127 @@
   "id": "fullstack",
   "title": "Full Stack Developer",
   "jobTitle": "Senior Full Stack Developer",
-  "tagline": "End-to-end enterprise systems with Java Spring Boot backends, secure REST APIs, and modern Angular frontends.",
-  "metaDescription": "Portfolio of Annamalai Kathiresan, a Senior Full Stack Developer specializing in Spring Boot, microservices, REST APIs, and Angular.",
+  "tagline": "I build end-to-end systems with Spring Boot and Angular — service contracts, data models, and deployment pipelines, not just the UI on top.",
+  "metaDescription": "Annamalai Kathiresan — Senior Full Stack Developer. Java Spring Boot, REST APIs, Angular at Tata, Comcast, ETS, and Verizon.",
   "resume": "/Annamalai_Resume.pdf",
+  "sectionIndex": {
+    "about": "01",
+    "skills": "02",
+    "projects": "03",
+    "experience": "04",
+    "contact": "05"
+  },
   "hero": {
-    "primaryCta": { "label": "View Full Stack Work", "href": "#projects" },
-    "secondaryCta": { "label": "Download Resume", "href": "/Annamalai_Resume.pdf", "download": true }
+    "primaryCta": { "label": "view work", "href": "#projects" },
+    "secondaryCta": { "label": "resume.pdf", "href": "/Annamalai_Resume.pdf", "download": true }
   },
   "about": {
-    "pillars": [
-      {
-        "title": "Full Stack Architecture",
-        "description": "End-to-end system design across monolithic and microservices architectures — from SQL tuning and API contracts to micro-frontends.",
-        "icon": "layers"
-      },
-      {
-        "title": "API & Data Layer",
-        "description": "Designing secure RESTful APIs, database schemas, authentication flows, and integration patterns for enterprise-scale applications.",
-        "icon": "database"
-      },
-      {
-        "title": "Delivery & DevOps",
-        "description": "CI/CD pipelines, containerization, and cross-functional leadership bridging backend services with polished user interfaces.",
-        "icon": "users"
-      }
-    ],
+    "prose": "I've spent 5 years owning features from API contract to deployed UI. My backend work is Java and Spring Boot — REST endpoints, auth flows, database schemas — paired with Angular or React on the front. I'm comfortable in monoliths and microservices, and I think about deployment, observability, and failure modes, not just the happy path.",
     "stats": [
-      { "value": 5, "label": "Years Exp.", "suffix": "+" },
-      { "value": 10, "label": "Projects", "suffix": "+" },
-      { "value": 100, "label": "Commitment", "suffix": "%" }
+      { "value": 5, "label": "years full stack", "suffix": "+" },
+      { "value": 4, "label": "enterprise clients", "suffix": "" },
+      { "value": 30, "label": "API latency cut (Verizon)", "suffix": "%" }
     ]
   },
   "skills": {
-    "title": "Technical Arsenal",
+    "title": "Stack",
     "categories": [
       {
-        "title": "Backend",
-        "tags": [
-          { "label": "Java 21", "logo": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" },
-          { "label": "Spring Boot", "logo": "https://spring.io/img/projects/spring-boot.svg" },
-          { "label": "RESTful APIs" },
-          { "label": "Microservices" },
-          { "label": "MySQL & MongoDB" }
-        ]
+        "title": "backend",
+        "items": ["Java 21", "Spring Boot", "REST APIs", "Microservices", "MySQL", "MongoDB"]
       },
       {
-        "title": "Frontend",
-        "tags": [
-          { "label": "Angular 19", "logo": "https://angular.io/assets/images/logos/angular/angular.svg" },
-          { "label": "React", "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
-          { "label": "TypeScript", "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" },
-          { "label": "RxJS" },
-          { "label": "NgRx" }
-        ]
+        "title": "frontend",
+        "items": ["Angular 19", "React", "TypeScript", "RxJS", "NgRx"]
       },
       {
-        "title": "DevOps & Tools",
-        "tags": [
-          { "label": "Docker" },
-          { "label": "CI/CD" },
-          { "label": "Git & GitHub" },
-          { "label": "System Design" },
-          { "label": "Micro-frontends" }
-        ]
+        "title": "ops",
+        "items": ["Docker", "GitHub Actions", "CI/CD", "AWS Amplify", "System Design"]
       }
     ]
   },
   "projects": {
-    "title": "Featured Projects",
+    "title": "Selected work",
     "items": [
       {
-        "title": "Tata Communications — Enterprise Platform",
-        "description": "Architected full-stack delivery for licensed Angular products with API-driven micro-frontends. Designed service contracts, managed CI/CD pipelines, and coordinated backend integration for modular deployment.",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/57/Tata_Comm_logo.svg",
-        "tags": ["Spring Boot", "Microservices", "Angular"]
+        "title": "Tata Communications — Service Integration Layer",
+        "client": "Tata Communications",
+        "period": "2024–present",
+        "context": "A licensed platform where Spring Boot services and Angular micro-frontends are released by different teams on different schedules.",
+        "built": "Versioned API contracts between backend services and UI modules, integration test suites in the pipeline, and coordinated GitHub Actions releases with rollback paths.",
+        "outcome": "Backend and frontend teams deploy independently without breaking cross-module dependencies — no more lockstep release trains.",
+        "stack": ["Spring Boot", "Microservices", "GitHub Actions"]
       },
       {
-        "title": "Comcast — Bulk Operations API",
-        "description": "Built Bulk Invite and Bulk Modem Restart flows end-to-end — REST API integration, NgRx state orchestration, and batch processing that improved onboarding efficiency by 75%.",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Comcast_%282013-2024%29_logo.svg",
-        "tags": ["REST APIs", "Angular", "NgRx"]
+        "title": "Comcast — Batch Processing Backend",
+        "client": "Comcast Corporation",
+        "period": "2022–2024",
+        "context": "Bulk account operations pushed hundreds of requests through backend services that were built for one-at-a-time processing.",
+        "built": "REST API integration for Bulk Invite and Bulk Modem Restart with request batching, partial-failure semantics, and idempotent retries so a failed row never corrupted the batch.",
+        "outcome": "75% faster onboarding for bulk operations with clean recovery from partial batch failures.",
+        "stack": ["REST APIs", "Java", "Angular"]
       },
       {
-        "title": "ETS — TOEFL Learn Mobile",
-        "description": "Full-stack mobile solution with React Native frontend and AWS Amplify backend. Cognito auth, GraphQL APIs, and 90% cross-platform code reuse across iOS and Android.",
-        "logo": "/toefl-logo.svg",
-        "tags": ["AWS Amplify", "Cognito", "React Native"]
+        "title": "ETS — TOEFL Learn Backend & App",
+        "client": "Educational Testing Service",
+        "period": "2021–2022",
+        "context": "Mobile learning product needing auth, content delivery, and offline-tolerant sync across two platforms.",
+        "built": "AWS Amplify backend with Cognito auth pools, a GraphQL content layer with fine-grained access rules, and the React Native client consuming it.",
+        "outcome": "Single backend configuration serving both iOS and Android; auth and content APIs required zero platform-specific code.",
+        "stack": ["AWS Amplify", "Cognito", "GraphQL"]
       },
       {
-        "title": "Verizon — Analytics Dashboard",
-        "description": "Delivered data-rich dashboards with Angular frontend consuming REST APIs. Adobe Analytics integration, query optimization, and 30% load time reduction through full-stack performance tuning.",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/8/83/Verizon_2024.svg",
-        "tags": ["REST APIs", "Angular", "Analytics"]
-      }
-    ]
-  },
-  "experience": {
-    "title": "Work Experience",
-    "items": [
-      {
-        "role": "Senior Consultant",
-        "company": "Capgemini Technology Services",
-        "date": "Dec 2024 – Present",
-        "description": "Lead full-stack delivery for enterprise products — API architecture, Angular frontends, CI/CD pipelines, and cross-team integration between backend services and UI modules."
-      },
-      {
-        "role": "Senior Application Developer",
-        "company": "Accenture",
-        "date": "Sep 2020 – Dec 2024",
-        "description": "End-to-end development across Verizon, ETS, and Comcast. Owned feature delivery from API integration through UI implementation, with focus on scalable Angular and Spring-based systems."
+        "title": "Verizon — Metrics API & Dashboard",
+        "client": "Verizon Communications",
+        "period": "2020–2021",
+        "context": "Ops dashboards fanned out to multiple slow REST endpoints on every page load.",
+        "built": "Response caching and query batching on the API side, server-side pagination for heavy tables, and fixes for N+1 query patterns found through production profiling.",
+        "outcome": "30% load time reduction, with API response times stable under peak internal traffic.",
+        "stack": ["REST APIs", "Caching", "Angular"]
       }
     ]
   },
   "architectureStrip": {
     "layers": ["Angular UI", "REST APIs", "Spring Boot", "MySQL / MongoDB"]
   },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "role": "Senior Consultant",
+        "company": "Capgemini Technology Services",
+        "date": "Dec 2024 – Present",
+        "highlights": [
+          "Own API-to-UI delivery for Tata Communications licensed products",
+          "Design service contracts between Spring Boot backends and Angular micro-frontends",
+          "Run CI/CD pipelines covering backend and frontend test suites in one release flow"
+        ]
+      },
+      {
+        "role": "Senior Application Developer",
+        "company": "Accenture",
+        "date": "Sep 2020 – Dec 2024",
+        "highlights": [
+          "Delivered full-stack features for Verizon, ETS, and Comcast",
+          "Built batch-processing API integrations for high-traffic internal tools",
+          "Profiled and fixed N+1 query patterns and slow API responses in production"
+        ]
+      }
+    ]
+  },
   "contact": {
-    "message": "I'm always open to discussing full-stack architecture, API design, or opportunities to build robust enterprise systems end-to-end.",
-    "email": "annamalaikathiresan@gmail.com",
+    "message": "Open to full-stack roles where I own a feature from database schema to deployed UI — especially Java + Angular systems.",
+    "email": "annamalaikathireshan@gmail.com",
     "socials": [
-      { "label": "GitHub", "href": "https://github.com/annamalai", "icon": "github" },
+      { "label": "GitHub", "href": "https://github.com/annamalaikathireshan", "icon": "github" },
       { "label": "LinkedIn", "href": "https://linkedin.com/in/annamalai-kathireshan-3b7020b0", "icon": "linkedin" }
     ]
   },
   "nav": [
-    { "label": "About", "href": "#about" },
-    { "label": "Skills", "href": "#skills" },
-    { "label": "Projects", "href": "#projects" },
-    { "label": "Experience", "href": "#experience" },
-    { "label": "Contact", "href": "#contact" }
+    { "label": "about", "href": "#about" },
+    { "label": "stack", "href": "#skills" },
+    { "label": "work", "href": "#projects" },
+    { "label": "experience", "href": "#experience" },
+    { "label": "contact", "href": "#contact" }
   ]
 }

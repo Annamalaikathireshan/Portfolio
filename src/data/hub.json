@@ -1,31 +1,28 @@
 {
   "name": "Annamalai Kathiresan",
-  "tagline": "Front-end Architect · Full Stack Developer · AI Engineer",
-  "subtitle": "Choose a specialized portfolio to explore my expertise across architecture, full stack, and AI engineering.",
+  "domain": "annamalaikathireshan.dev",
+  "tagline": "Front-end architect, full stack developer, and AI engineer — 5 years across telecom, education, and enterprise products.",
   "cards": [
-      {
-        "id": "frontend",
-        "href": "frontend/",
-      "title": "Front-end Architect",
-      "description": "High-performance, pixel-perfect enterprise UIs with Angular, React, and modern CSS.",
-      "badge": "UI/UX & FE ARCHITECTURE",
-      "variant": "frontend"
+    {
+      "id": "frontend",
+      "index": "1",
+      "href": "frontend/",
+      "path": "frontend/",
+      "title": "Front-end Architect"
     },
-      {
-        "id": "fullstack",
-        "href": "fullstack/",
-      "title": "Full Stack Developer",
-      "description": "End-to-end expertise spanning Java Spring Boot backends, secure REST APIs, and modern frontend frameworks.",
-      "badge": "JAVA + SPRING + ANGULAR",
-      "variant": "fullstack"
+    {
+      "id": "fullstack",
+      "index": "2",
+      "href": "fullstack/",
+      "path": "fullstack/",
+      "title": "Full Stack Developer"
     },
-      {
-        "id": "ai",
-        "href": "ai/",
-      "title": "AI Engineer",
-      "description": "Intelligent systems with LLMs, RAG pipelines, and modern ML — from fundamentals to production-ready AI.",
-      "badge": "LLMs + RAG + AGENTS",
-      "variant": "ai"
+    {
+      "id": "ai",
+      "index": "3",
+      "href": "ai/",
+      "path": "ai/",
+      "title": "AI Engineer"
     }
   ]
 }

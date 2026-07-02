@@ -1,13 +1,15 @@
 ---
+import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
 import '../styles/hub.css';
 
 interface Props {
   title: string;
   description: string;
+  noindex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, noindex = false } = Astro.props;
 const site = import.meta.env.SITE;
 const base = import.meta.env.BASE_URL;
 const canonical = new URL(Astro.url.pathname, site);
@@ -21,6 +23,7 @@ const ogImage = new URL(`${base}hero-tech.png`, site).href;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
   <link rel="canonical" href={canonical} />
   <meta property="og:type" content="website" />
   <meta property="og:title" content={title} />
@@ -31,10 +34,10 @@ const ogImage = new URL(`${base}hero-tech.png`, site).href;
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Annamalai Kathiresan",
-    "jobTitle": ["Front-end Architect", "Full Stack Developer", "AI Engineer"],
     "url": site,
-    "email": "annamalaikathiresan@gmail.com"
+      "email": "annamalaikathireshan@gmail.com"
   })} />
+  <ClientRouter />
 </head>
 <body class="hub-page">
   <div class="grid-overlay" aria-hidden="true"></div>
