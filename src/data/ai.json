@@ -1,59 +1,47 @@
 {
   "id": "ai",
   "title": "AI Engineer",
-  "jobTitle": "AI Engineer",
-  "tagline": "I build LLM-powered systems — RAG pipelines, classifiers, and agent workflows — with the same engineering discipline I spent 5 years applying to production web platforms.",
-  "metaDescription": "Annamalai Kathiresan — AI Engineer. LLMs, RAG pipelines, PyTorch, LangChain, and production AI applications.",
+  "jobTitle": "AI-focused Lead Engineer",
+  "tagline": "I architect enterprise AI systems — LangGraph agents, RAG pipelines, and LLM fine-tuning — with 6+ years shipping production platforms for global telecommunications clients.",
+  "metaDescription": "Annamalai Kathiresan — AI-focused Lead Engineer. LangGraph, RAG, LLM fine-tuning, FastAPI, and production AI for enterprise telecommunications.",
   "resume": "/Annamalai_Kathireshan_AI_Engineer.pdf",
   "sectionIndex": {
     "about": "01",
-    "learning": "02",
-    "skills": "03",
-    "projects": "04",
-    "experience": "05",
-    "contact": "06"
+    "skills": "02",
+    "projects": "03",
+    "experience": "04",
+    "contact": "05"
   },
   "hero": {
     "primaryCta": { "label": "view projects", "href": "#projects" },
     "secondaryCta": { "label": "resume.pdf", "href": "/Annamalai_Kathireshan_AI_Engineer.pdf", "download": true }
   },
   "about": {
-    "prose": "I moved into AI engineering from 5 years of production software — Angular frontends and Spring Boot backends for Tata, Comcast, and Verizon. That background is the point: I approach ML systems as software that has to ship, so API design, error handling, evaluation, and deployment get the same weight as model quality. My focus is RAG systems, NLP classifiers, and agent workflows built end to end.",
+    "prose": "I'm an AI-focused lead engineer with 6+ years building enterprise web applications and integrating generative AI into production. At Tata Communications, I architect LangGraph agents for conversational commerce, RAG pipelines grounded in live product catalogs, and automated RCA for production incidents — bridging Angular 19 micro frontends with Python/FastAPI AI backends. I treat ML systems as software: evaluation metrics, deployment guardrails, and cross-functional delivery matter as much as model quality.",
     "stats": [
-      { "value": 9, "label": "ML topics studied", "suffix": "" },
-      { "value": 4, "label": "hands-on AI projects", "suffix": "" },
-      { "value": 5, "label": "years software engineering", "suffix": "+" }
-    ]
-  },
-  "learning": {
-    "title": "Learning log",
-    "subtitle": "A structured self-study path — fundamentals through production LLM systems, each step paired with hands-on code.",
-    "items": [
-      { "step": "01", "title": "Machine Learning Fundamentals", "description": "Supervised/unsupervised learning, feature engineering, cross-validation, evaluation metrics." },
-      { "step": "02", "title": "Deep Learning & Neural Networks", "description": "Architectures, backpropagation, training loops, activation functions." },
-      { "step": "03", "title": "Natural Language Processing", "description": "Tokenization, embeddings, transformers, text classification." },
-      { "step": "04", "title": "Large Language Models", "description": "GPT architecture, prompt engineering, context windows, token optimization." },
-      { "step": "05", "title": "Generative AI", "description": "Text generation, diffusion concepts, multimodal applications." },
-      { "step": "06", "title": "RAG & Embeddings", "description": "Vector search, chunking strategies, retrieval pipelines, embedding models." },
-      { "step": "07", "title": "Python for ML", "description": "NumPy, Pandas, scikit-learn, preprocessing, EDA workflows." },
-      { "step": "08", "title": "PyTorch & TensorFlow", "description": "Model building, custom training loops, tensor operations." },
-      { "step": "09", "title": "AI Agents & Tool Use", "description": "LangChain orchestration, tool calling, multi-step agent workflows." }
+      { "value": 95, "label": "intent accuracy (Tata AI agent)", "suffix": "%" },
+      { "value": 11, "label": "engineers led on AI transition", "suffix": "+" },
+      { "value": 6, "label": "years shipping production systems", "suffix": "+" }
     ]
   },
   "skills": {
     "title": "Stack",
     "categories": [
       {
-        "title": "ml",
-        "items": ["Python", "PyTorch", "TensorFlow", "scikit-learn", "NumPy", "Pandas"]
+        "title": "ai & gen systems",
+        "items": ["LLMs", "GPT-OSS", "Prompt Engineering", "RAG Pipelines", "LangGraph", "LangChain", "AI Agents", "Multi-Agent Systems", "Vector Databases", "Semantic Chunking", "HNSW/ANN", "Source Attribution"]
       },
       {
-        "title": "llms",
-        "items": ["Prompt Engineering", "OpenAI API", "Hugging Face", "NLP", "Fine-tuning"]
+        "title": "llm engineering",
+        "items": ["LoRA", "QLoRA", "SFT", "PEFT", "DPO", "RLHF", "Quantization", "vLLM", "Router Agents", "JSONL/ChatML", "Hallucination Mitigation"]
       },
       {
-        "title": "systems",
-        "items": ["RAG Pipelines", "Vector Embeddings", "LangChain", "AI Agents", "REST APIs", "Docker"]
+        "title": "ml & nlp",
+        "items": ["XGBoost", "Random Forest", "PyTorch", "TensorFlow", "Transformers", "Embeddings", "Hugging Face", "scikit-learn", "NumPy", "Pandas"]
+      },
+      {
+        "title": "platform",
+        "items": ["Python", "FastAPI", "Flask", "Angular 19", "React", "TypeScript", "Micro Frontends", "REST APIs", "AWS", "Docker", "GitHub Actions"]
       }
     ]
   },
@@ -61,23 +49,31 @@
     "title": "Projects",
     "items": [
       {
+        "title": "Hosted SASE & TC SSE — AI Procurement Platform",
+        "client": "Tata Communications Ltd",
+        "period": "Dec 2024 – Present",
+        "context": "Enterprise security products where global data center license procurement moved from UI-heavy workflows to an AI-first conversational experience.",
+        "built": "Production LangGraph agent with cyclical graph logic, tool calling, and human-in-the-loop fallbacks; Python/FastAPI backend with streaming generators and GPT-OSS LLMs; RAG pipeline with semantic chunking, embedding models, and HNSW/ANN search over live product docs and pricing catalogs; PEFT fine-tuning (LoRA/QLoRA, SFT) on domain datasets; Angular 19 micro frontend architecture hosting AI components independently.",
+        "outcome": "95% intent accuracy on multi-turn license configuration and order placement; 30% faster builds via independent AI/UI releases; retrieval-quality benchmarks and LLM evaluation metrics gating production rollout.",
+        "stack": ["LangGraph", "FastAPI", "RAG", "LoRA/QLoRA", "Angular 19", "Docker", "GitHub Actions"]
+      },
+      {
+        "title": "LangGraph RCA Agent",
+        "client": "Tata Communications Ltd",
+        "period": "Dec 2024 – Present",
+        "context": "Production incidents requiring log analysis, database queries, and multi-step reasoning across enterprise security infrastructure.",
+        "built": "LangGraph-driven root cause analysis agent with automated reasoning loops — querying logs and databases, routing between tool calls, and escalating with human-in-the-loop when confidence is low.",
+        "outcome": "40% reduction in incident resolution time through automated multi-step diagnosis instead of manual triage.",
+        "stack": ["LangGraph", "Python", "FastAPI", "AI Agents", "Tool Calling"]
+      },
+      {
         "title": "RAG Knowledge Assistant",
         "client": "Personal project",
         "period": "2025",
-        "context": "Question answering over custom document collections without fine-tuning a model.",
-        "built": "Retrieval pipeline with semantic chunking, vector embeddings, and LLM answer generation — with source attribution wired through so every answer cites the chunks it came from.",
+        "context": "Question answering over custom document collections with grounded, cited responses.",
+        "built": "Retrieval pipeline with semantic chunking, vector embeddings, cosine similarity search, and LLM answer generation — source attribution wired through so every answer cites the chunks it came from.",
         "outcome": "Accurate answers on domain-specific content with per-chunk citations; retrieval quality measured against a hand-built eval set.",
-        "stack": ["RAG", "Embeddings", "OpenAI API"],
-        "link": "https://github.com/annamalaikathireshan"
-      },
-      {
-        "title": "Sentiment Classifier",
-        "client": "Personal project",
-        "period": "2025",
-        "context": "Binary sentiment analysis on short text, built to compare classical ML against neural approaches honestly.",
-        "built": "One preprocessing pipeline feeding both a scikit-learn baseline and a PyTorch neural classifier, evaluated on the same held-out test set.",
-        "outcome": "Documented accuracy comparison between the two approaches, including where the simpler model wins.",
-        "stack": ["NLP", "PyTorch", "scikit-learn"],
+        "stack": ["RAG", "Embeddings", "Vector Search"],
         "link": "https://github.com/annamalaikathireshan"
       },
       {
@@ -89,16 +85,6 @@
         "outcome": "Reliable multi-step execution — failed tool calls degrade gracefully instead of derailing the run.",
         "stack": ["LangChain", "AI Agents", "Tool Use"],
         "link": "https://github.com/annamalaikathireshan"
-      },
-      {
-        "title": "Fine-tuning Experiment",
-        "client": "Personal project",
-        "period": "2025",
-        "context": "Domain adaptation on a small custom dataset using transfer learning.",
-        "built": "Hugging Face transformers fine-tuning pipeline with a frozen baseline, held-out evaluation, and experiment tracking across runs.",
-        "outcome": "Measured performance lift over the zero-shot baseline on domain-specific queries.",
-        "stack": ["Fine-tuning", "Hugging Face", "Transformers"],
-        "link": "https://github.com/annamalaikathireshan"
       }
     ]
   },
@@ -106,12 +92,15 @@
     "title": "Experience",
     "items": [
       {
-        "role": "Senior Consultant",
-        "company": "Capgemini Technology Services",
+        "role": "Senior Consultant — C1 Grade",
+        "company": "Capgemini Technology Services India Ltd",
         "date": "Dec 2024 – Present",
         "highlights": [
-          "Architect API-driven systems at Tata Communications — the same integration patterns used to put AI services into production",
-          "CI/CD and observability practices that transfer directly to ML model deployment pipelines"
+          "Lead end-to-end development of Hosted SASE and TC SSE for Tata Communications — transforming data center licensing into an AI-first procurement platform",
+          "Architect production LangGraph AI agents with tool calling, router agents, and human-in-the-loop fallbacks for conversational commerce",
+          "Engineer RAG pipelines with semantic chunking, HNSW/ANN vector search, and compliance check-nodes grounding LLM outputs in live catalogs",
+          "Apply PEFT fine-tuning (LoRA/QLoRA, SFT) and LLM evaluation metrics before production rollout on regulated enterprise workflows",
+          "Direct a cross-functional team of 11 through the transition from UI-based workflows to AI-first experiences"
         ]
       },
       {
@@ -119,14 +108,15 @@
         "company": "Accenture",
         "date": "Sep 2020 – Dec 2024",
         "highlights": [
-          "Built data-heavy analytics dashboards at Verizon — practical experience with large-scale data pipelines",
-          "Shipped production Angular/React apps with the reliability standards AI products need"
+          "Led front-end development for Verizon, TOFL Learn, and Comcast — Angular and React apps with enterprise reliability standards",
+          "Built data-heavy analytics dashboards and AWS-backed mobile apps; resolved 45+ critical production bugs",
+          "Mentored junior developers and received multiple performance awards including Extra Mile, ACE, and WOW"
         ]
       }
     ]
   },
   "contact": {
-    "message": "Open to AI engineering roles and RAG system work — especially teams that want someone who can ship the whole system, not just the notebook.",
+    "message": "Open to AI engineering and lead engineer roles — especially teams building production LLM systems, RAG pipelines, or agent orchestration at scale.",
     "email": "annamalaikathireshan@gmail.com",
     "socials": [
       { "label": "GitHub", "href": "https://github.com/annamalaikathireshan", "icon": "github" },
@@ -135,7 +125,6 @@
   },
   "nav": [
     { "label": "about", "href": "#about" },
-    { "label": "learning", "href": "#learning" },
     { "label": "stack", "href": "#skills" },
     { "label": "projects", "href": "#projects" },
     { "label": "experience", "href": "#experience" },

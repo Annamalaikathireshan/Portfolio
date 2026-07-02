@@ -4,7 +4,6 @@ import ScrollProgress from '../components/ui/ScrollProgress.astro';
 import Header from '../components/ui/Header.astro';
 import Hero from '../components/sections/Hero.astro';
 import About from '../components/sections/About.astro';
-import Learning from '../components/sections/Learning.astro';
 import Skills from '../components/sections/Skills.astro';
 import Projects from '../components/sections/Projects.astro';
 import Experience from '../components/sections/Experience.astro';
@@ -24,7 +23,6 @@ import data from '../data/ai.json';
   <main>
     <Hero data={data} />
     <About about={data.about} sectionIndex={data.sectionIndex} />
-    {data.learning && <Learning learning={data.learning} sectionIndex={data.sectionIndex} />}
     <Skills skills={data.skills} sectionIndex={data.sectionIndex} />
     <Projects projects={data.projects} sectionIndex={data.sectionIndex} />
     <Experience experience={data.experience} sectionIndex={data.sectionIndex} />

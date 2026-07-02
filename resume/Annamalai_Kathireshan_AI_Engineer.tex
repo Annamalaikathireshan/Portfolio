@@ -1,0 +1,294 @@
+%-------------------------
+% Resume in Latex
+% Author : Annamalai Kathireshan
+% License : MIT
+%------------------------
+
+% Overleaf: keep Compiler = pdfLaTeX (default). Recompile after upload.
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+%----------FONT OPTIONS (Overleaf-safe)----------
+% Active: Source Sans Pro — clean, professional, works on Overleaf pdfLaTeX
+\usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}
+
+% Optional: IBM Plex Sans (matches portfolio) — on Overleaf:
+%   1. Menu → Compiler → XeLaTeX
+%   2. Comment out the 2 lines above
+%   3. Uncomment the 2 lines below
+% \usepackage{fontspec}
+% \setmainfont{IBM Plex Sans}
+
+% Other pdfLaTeX alternatives (comment Source Sans Pro, uncomment one):
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage{charter}          % serif, executive style
+
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.6in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+
+\begin{center}
+    {\Huge \scshape Annamalai Kathireshan} \\ \vspace{1pt}
+    Chennai, India \\ \vspace{1pt}
+    \small \href{tel:+917598470364}{ \raisebox{-0.1\height}\faPhone\ \underline{+91-7598470364} ~} \href{mailto:annamalaikathireshan@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{annamalaikathireshan@gmail.com}} ~
+    \href{https://annamalaikathireshan.github.io/Portfolio/ai}{\raisebox{-0.2\height}\faGlobe\ \underline{annamalaikathireshan.github.io}}  ~
+
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{PROFESSIONAL SUMMARY}
+\resumeSubHeadingListStart
+\resumeItem{Innovative {AI-focused Lead Engineer} with over 6 years of experience architecting enterprise-grade web applications and integrating {Generative AI} solutions to solve complex business problems.}
+\resumeItem{Expertise in building scalable AI agents using {Python, FastAPI, and LLMs}, specifically for conversational commerce and automated root cause analysis (RCA).}
+\resumeItem{Proven track record of leading cross-functional teams (11+ members) to deliver high-impact licensed products for global telecommunications leaders.}
+\resumeItem{Specialized in bridging {Modern Frontend Architecture (Angular 19)} and {AI Backend Orchestration (RAG, Prompt Engineering, LangGraph)} with hands-on delivery of {ML pipelines, deep learning NLP workflows, and LLM fine-tuning} in enterprise production environments.}
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{SKILLS}
+\resumeSubHeadingListStart
+\resumeItem{\textbf{AI \& Generative Systems:} LLMs (GPT, OSS Models), Prompt Engineering, RAG Pipelines, LangGraph, LangChain, AI Agents, Multi-Agent Systems, Vector Databases, Semantic Chunking, Context Window Optimization, HNSW/ANN Retrieval, Source Attribution, Hallucination Mitigation.}
+\resumeItem{\textbf{LLM Engineering:} Fine-tuning (LoRA, QLoRA, SFT, DPO, RLHF, PEFT), Quantization, LLM Evaluation Metrics, Router Agents, Temperature \& Token Optimization, Model Serving (vLLM, TGI, llama.cpp), Dataset Preparation (JSONL/ChatML).}
+\resumeItem{\textbf{Machine Learning:} Supervised/Unsupervised Learning, Regression \& Classification, Feature Engineering, Cross-validation, XGBoost, Random Forest, Decision Trees, Hyperparameter Tuning (GridSearchCV, Random Search), PCA, K-Means, DBSCAN, Model Evaluation (MSE, MAE, F1, ROC-AUC).}
+\resumeItem{\textbf{Deep Learning \& NLP:} Neural Networks, Transformers, Embeddings, Tokenization, LSTM, Text Classification, PyTorch, TensorFlow, scikit-learn, Hugging Face.}
+\resumeItem{\textbf{Frameworks/Libraries:} Angular 19, React JS 18, RxJS, Next JS 13, FastAPI, Flask, NumPy, Pandas.}
+\resumeItem{\textbf{Languages:} TypeScript, JavaScript (ES6+), Python.}
+\resumeItem{\textbf{Web Technologies/Cloud:} Micro Frontends, REST APIs, AWS (Amplify, S3, Cognito, DynamoDB).}
+\resumeItem{\textbf{MLOps \& Tools:} Docker, Hugging Face TRL/PEFT, vLLM, GitHub Actions (AI CI/CD), Streaming Generators, Human-in-the-Loop Workflows, New Relics, Adobe Analytics.}
+\resumeSubHeadingListEnd
+
+%-----------WORK EXPERIENCE-----------
+\section{WORK EXPERIENCE}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Senior Application Developer}{September 2020 -- December 2024}
+{Accenture}{Chennai, India}
+\resumeItemListStart
+\resumeItem{Led the development of high-impact front-end features and resolved over 45 critical bugs, enhancing user experience and system stability.}
+\resumeItem{Collaborated with cross-functional teams to gather requirements and design effective solutions, ensuring alignment with business goals.}
+\resumeItem{Utilized Agile methodologies to manage project timelines and deliver high-quality software solutions on time.}
+\resumeItem{Received multiple awards and recognition for exceptional performance and contributions to project success.}
+\resumeItem{Provided mentorship and guidance to junior developers, fostering a collaborative and productive team environment.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Senior Consultant - C1 Grade}{December 2024 -- Present}
+{Capgemini Technology Services India Ltd}{Chennai, India}
+\resumeItemListStart
+\resumeItem{Led the end-to-end development of two flagship licensed enterprise security products for {Tata Communications Ltd}: {Hosted SASE} and {TC SSE}, transforming data center licensing into an AI-first procurement platform.}
+\resumeItem{Architected a production {LangGraph AI agent} with cyclical graph logic, tool calling, and human-in-the-loop fallbacks---enabling multi-turn license configuration and order placement with 95\% intent accuracy.}
+\resumeItem{Built the agent backend in {Python/FastAPI} with streaming generators and stateful session management, integrating {GPT-OSS LLMs} via custom prompt templates and router agents for product recommendations.}
+\resumeItem{Engineered a {RAG pipeline} with semantic chunking, embedding models, cosine similarity, and HNSW/ANN vector search over live product docs and pricing catalogs; grounded outputs with source attribution and compliance check-nodes.}
+\resumeItem{Applied {PEFT fine-tuning (LoRA/QLoRA)} and instruction tuning (SFT) on domain-specific datasets (JSONL/ChatML) to improve license-configuration accuracy while mitigating hallucinations in regulated enterprise workflows.}
+\resumeItem{Deployed {LLM evaluation metrics} and retrieval-quality benchmarks to tune chunking strategies, context window budgeting, and temperature settings before production rollout.}
+\resumeItem{Implemented a {LangGraph RCA agent} for production incidents---automated log analysis, database queries, and multi-step reasoning loops that reduced incident resolution time by 40\%.}
+\resumeItem{Directed a cross-functional team of 11 through the transition from UI-based workflows to AI-first experiences; managed SDLC, CI/CD for AI model deployments, and REST API integration with enterprise security guardrails.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+\resumeSubHeadingListStart
+\resumeSubheading
+{B.Tech in Information Technology}{Graduated: May 2020}
+{Sri Krishna College of Engineering and Technology}{Chennai, India}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{Verizon Communications} $|$ \textbf{Duration: Sep 2020 to July 2022}}{}
+\resumeItem{\textbf{Technical Skills:} Angular, Jira, JavaScript, GitLab, Prime Ng, New Relics, Adobe Analytics}
+\resumeItemListStart
+\resumeItem{Adhered to coding standards and consistently aligned with best practices throughout the development process.}
+\resumeItem{Conducted integration testing across diverse workflows and promptly addressed any identified issues.}
+\resumeItem{Proficiently detected and resolved front-end code issues to eliminate bugs and enhance system performance.}
+\resumeItem{Proficient in crafting visually captivating and user-friendly interfaces.}
+\resumeItem{Optimized applications for maximum speed.}
+\resumeItem{Collaborated closely with back-end developers and web designers to enhance user experience and usability.}
+\resumeItem{Developed responsive Angular components using PrimeNG UI library, implementing complex data tables and dynamic forms that improved user interaction by 40\%.}
+\resumeItem{Integrated Adobe Analytics for user behavior tracking, providing insights that led to a 25\% improvement in user engagement.}
+\resumeItemListEnd
+\vspace{6pt}
+\resumeProjectHeading
+{\textbf{TOFL Learn} $|$ \textbf{Duration: July 2022 to Feb 2024}} {}
+\resumeItem{\textbf{Technical Skills:} React JS, React Native, JavaScript, Jira, GitHub, AWS Cognito, Amplify, S3, DynamoDB}
+\resumeItemListStart
+\resumeItem{Enhanced skill set and embarked on a career in mobile application development.}
+\resumeItem{Built an application (Converse Workspace) from the ground up, achieving timely delivery within established timelines.}
+\resumeItem{Utilized AWS Amplify, S3 Buckets, DynamoDB, and managed Distributed Infrastructure and Integration (DII) events.}
+\resumeItem{Integrated AWS Cognito for secure user authentication and authorization, implementing multi-factor authentication and social identity providers that improved security compliance by 85\%.}
+\resumeItem{Researched and suggested new libraries and protocols.}
+\resumeItem{Facilitated the complete application life cycle spanning from conceptualization and design through testing to final release.}
+\resumeItem{Leveraged JavaScript async/await patterns for efficient API integration, reducing data fetching latency by 35\%.}
+\resumeItem{Developed cross-platform mobile application using React Native, achieving 90\% code reusability between iOS and Android platforms.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Comcast Corporation} $|$ \textbf{Duration: Mar 2024 to Dec 2024}} {}
+\resumeItem{\textbf{Technical Skills:} Angular, TypeScript, JavaScript, GitHub, Angular Material, Jira, NgRx, RxJs}
+\resumeItemListStart
+\resumeItem{Designed and implemented the "Bulk Invite" feature, streamlining the process of inviting multiple users to the application, resulting in a 75\% reduction in user onboarding time. }
+\resumeItem{Enabled users to upload a CSV file containing a list of users requiring access to the application.}
+\resumeItem{Implemented logic to categorize uploaded data into four categories: Invalid, Incomplete, Duplicate, and Valid entries.}
+\resumeItem{Developed functionality to assign appropriate access and permissions to valid users based on their roles in corporates, brands, and franchises.}
+\resumeItem{Engineered the "BulkModemRestart" feature, enabling simultaneous restart of up to 500 modems, reducing downtime by 60\% and improving customer satisfaction scores by 25\%. }
+\resumeItem{Utilized TypeScript's strong typing and interfaces to reduce runtime errors by 65\% in the bulk operations module.}
+\resumeItem{Designed reusable Angular services for API integration, improving code maintainability and reducing development time by 40\%.}
+\resumeItem{Significantly improved the efficiency of the user invitation process, reducing manual effort and minimizing errors.}
+\resumeItem{Implemented advanced content projection patterns using ng-content and structural directives (ngTemplate, ngIf, ngFor), creating flexible, reusable components that reduced code duplication by 40\% and improved component composition.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Tata Communications Ltd} $|$ \textbf{Duration: Dec 2024 to Present}} {}
+\resumeItem{\textbf{Technical Skills:} LangGraph, LangChain, Python (FastAPI), GPT-OSS LLMs, RAG, Vector Databases, LoRA/QLoRA, Angular 19, Micro Frontends, Docker, GitHub Actions}
+\resumeItemListStart
+\resumeItem{Lead Architect for {Hosted SASE} and {TC SSE}---enterprise security products enabling global data center license procurement through conversational AI.}
+\resumeItem{Delivered a production AI chatbot with {LangGraph multi-agent orchestration}: router agents, tool calling, and multi-step reasoning chains for complex catalog navigation and order placement.}
+\resumeItem{Built RAG retrieval over live pricing and product documentation using semantic chunking, embedding models, and HNSW/ANN search; validated LLM responses with agentic check-nodes against compliance rules.}
+\resumeItem{Fine-tuned domain models via {LoRA/QLoRA and SFT} on enterprise datasets; evaluated with retrieval-quality benchmarks and LLM metrics before serving through {vLLM}-backed endpoints.}
+\resumeItem{Designed Angular 19 Micro Frontend architecture to host AI components independently, improving build times by 30\% and enabling parallel scaling of agent and UI releases.}
+\resumeItem{Automated AI model and backend CI/CD via GitHub Actions with Docker containerization, production guardrails, and integration into existing enterprise security protocols.}
+\resumeItemListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{ACHIEVEMENTS}
+\resumeSubHeadingListStart
+\resumeItem{Honored with The Extra Mile Award, ACE award and WOW awards for significant contributions to project success.}
+\resumeItem{Received appreciation from management for successfully resolving pending code flows.}
+\resumeItem{Received client accolades for consistently delivering projects punctually.}
+\resumeSubHeadingListEnd
+
+\end{document}
