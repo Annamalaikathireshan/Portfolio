@@ -32,6 +32,7 @@ function init() {
 
   // Recalculate trigger positions once fonts/layout settle.
   requestAnimationFrame(() => ScrollTrigger.refresh());
+  document.fonts?.ready?.then(() => ScrollTrigger.refresh());
 }
 
 function cleanup() {
